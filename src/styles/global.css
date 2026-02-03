@@ -315,73 +315,13 @@
   --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #c084fc 100%);
 }
 
-/* ------------------------------------------------------------
-   🌌 TEMA: LYOSS FUSION (Híbrido Web + Cyberpunk - Base)
-   Paleta: Azul Web + Violeta/Cyan Cyberpunk + Fondo Custom
-   Combina la identidad de la web Lyoss con acentos cyberpunk.
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion"] {
-  /* Fondos - Base custom #191e24 */
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #191e24;
-  --border-color: #3d4451;
-  
-  /* Textos */
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  /* Paleta de Acentos - Nivel 1 (Más brillante que antes) */
-  --accent-primary: #8aa8e8;      /* Azul brillante */
-  --accent-secondary: #c98ff0;    /* Violeta vibrante */
-  --accent-tertiary: #70e0f5;     /* Cyan luminoso */
-  
-  /* Estados Semánticos */
-  --accent-success: #8ce8b0;      /* Verde brillante */
-  --accent-warning: #f5d080;      /* Amarillo dorado */
-  --accent-error: #f08da0;        /* Rosa coral */
-  --accent-info: #85d0e8;         /* Cyan info */
-  --accent-highlight: #b090d8;    /* Violeta highlight */
-  
-  /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, #8aa8e8 0%, #c98ff0 100%);
-  --gradient-accent: linear-gradient(135deg, #70e0f5 0%, #8aa8e8 100%);
-}
+/* ============================================================
+   🌌 FAMILIA LYOSS FUSION - ESCALAS DE INTENSIDAD
+   Escala de 6 niveles: Vivid → Intense → Radiant → Electric → Full Neon
+   ============================================================ */
 
 /* ------------------------------------------------------------
-   🌌 TEMA: LYOSS FUSION PANELS (Con Nav/Sidebar destacados)
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-panels"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #1f242b;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  --accent-primary: #8aa8e8;
-  --accent-secondary: #c98ff0;
-  --accent-tertiary: #70e0f5;
-  
-  --accent-success: #8ce8b0;
-  --accent-warning: #f5d080;
-  --accent-error: #f08da0;
-  --accent-info: #85d0e8;
-  --accent-highlight: #b090d8;
-  
-  --gradient-primary: linear-gradient(135deg, #8aa8e8 0%, #c98ff0 100%);
-  --gradient-accent: linear-gradient(135deg, #70e0f5 0%, #8aa8e8 100%);
-}
-
-/* ------------------------------------------------------------
-   ✨ TEMA: LYOSS FUSION VIVID (Escala 1 - Intenso)
+   🌌 TEMA: LYOSS FUSION VIVID (Escala 1 - Base Vívido)
    ------------------------------------------------------------ */
 [data-theme="lyoss-fusion-vivid"] {
   --bg-primary: #191e24;
@@ -395,24 +335,21 @@
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  /* Nivel 1 - Colores vívidos e intensos */
-  --accent-primary: #5b9cf5;      /* Azul eléctrico saturado */
+  /* Nivel 1 - Vívido */
+  --accent-primary: #5b9cf5;      /* Azul saturado */
   --accent-secondary: #b855f5;    /* Violeta intenso */
-  --accent-tertiary: #00d4ff;     /* Cyan puro vibrante */
+  --accent-tertiary: #00d4ff;     /* Cyan vibrante */
   
-  --accent-success: #22d97a;      /* Verde esmeralda vivo */
-  --accent-warning: #ffb020;      /* Naranja ámbar intenso */
-  --accent-error: #ff4d6d;        /* Rosa/rojo vibrante */
-  --accent-info: #00b8e6;         /* Cyan info saturado */
-  --accent-highlight: #9055e8;    /* Violeta highlight */
+  --accent-success: #22d97a;
+  --accent-warning: #ffb020;
+  --accent-error: #ff4d6d;
+  --accent-info: #00b8e6;
+  --accent-highlight: #9055e8;
   
   --gradient-primary: linear-gradient(135deg, #5b9cf5 0%, #b855f5 100%);
   --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #5b9cf5 100%);
 }
 
-/* ------------------------------------------------------------
-   ✨ TEMA: LYOSS FUSION VIVID PANELS
-   ------------------------------------------------------------ */
 [data-theme="lyoss-fusion-vivid-panels"] {
   --bg-primary: #191e24;
   --bg-secondary: #1f242b;
@@ -440,7 +377,175 @@
 }
 
 /* ------------------------------------------------------------
-   💫 TEMA: LYOSS FUSION ELECTRIC (Escala 2 - Eléctrico)
+   ✨ TEMA: LYOSS FUSION INTENSE (Escala 2 - Intermedio 1)
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-intense"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Nivel 2 - Intense (25% hacia Electric) */
+  --accent-primary: #4e94fa;      /* Azul más brillante */
+  --accent-secondary: #c44df2;    /* Violeta más magenta */
+  --accent-tertiary: #00dcff;     /* Cyan más puro */
+  
+  --accent-success: #1ae080;
+  --accent-warning: #ffb810;
+  --accent-error: #ff4060;
+  --accent-info: #00c0f0;
+  --accent-highlight: #9850f0;
+  
+  --gradient-primary: linear-gradient(135deg, #4e94fa 0%, #c44df2 100%);
+  --gradient-accent: linear-gradient(135deg, #00dcff 0%, #4e94fa 100%);
+}
+
+[data-theme="lyoss-fusion-intense-panels"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  --accent-primary: #4e94fa;
+  --accent-secondary: #c44df2;
+  --accent-tertiary: #00dcff;
+  
+  --accent-success: #1ae080;
+  --accent-warning: #ffb810;
+  --accent-error: #ff4060;
+  --accent-info: #00c0f0;
+  --accent-highlight: #9850f0;
+  
+  --gradient-primary: linear-gradient(135deg, #4e94fa 0%, #c44df2 100%);
+  --gradient-accent: linear-gradient(135deg, #00dcff 0%, #4e94fa 100%);
+}
+
+/* ------------------------------------------------------------
+   💎 TEMA: LYOSS FUSION RADIANT (Escala 3 - Intermedio 2)
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-radiant"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Nivel 3 - Radiant (50% entre Vivid y Electric) */
+  --accent-primary: #4890fd;      /* Azul radiante */
+  --accent-secondary: #cf46f0;    /* Magenta radiante */
+  --accent-tertiary: #00e5ff;     /* Cyan radiante */
+  
+  --accent-success: #10e888;
+  --accent-warning: #ffc000;
+  --accent-error: #ff3858;
+  --accent-info: #00c5f8;
+  --accent-highlight: #a050f5;
+  
+  --gradient-primary: linear-gradient(135deg, #4890fd 0%, #cf46f0 100%);
+  --gradient-accent: linear-gradient(135deg, #00e5ff 0%, #4890fd 100%);
+}
+
+[data-theme="lyoss-fusion-radiant-panels"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  --accent-primary: #4890fd;
+  --accent-secondary: #cf46f0;
+  --accent-tertiary: #00e5ff;
+  
+  --accent-success: #10e888;
+  --accent-warning: #ffc000;
+  --accent-error: #ff3858;
+  --accent-info: #00c5f8;
+  --accent-highlight: #a050f5;
+  
+  --gradient-primary: linear-gradient(135deg, #4890fd 0%, #cf46f0 100%);
+  --gradient-accent: linear-gradient(135deg, #00e5ff 0%, #4890fd 100%);
+}
+
+/* ------------------------------------------------------------
+   🔥 TEMA: LYOSS FUSION SURGE (Escala 4 - Intermedio 3)
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-surge"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Nivel 4 - Surge (75% hacia Electric) */
+  --accent-primary: #408dfe;      /* Azul surge */
+  --accent-secondary: #d540f0;    /* Magenta surge */
+  --accent-tertiary: #00edff;     /* Cyan surge */
+  
+  --accent-success: #08f090;
+  --accent-warning: #ffc800;
+  --accent-error: #ff3050;
+  --accent-info: #00caff;
+  --accent-highlight: #a852f8;
+  
+  --gradient-primary: linear-gradient(135deg, #408dfe 0%, #d540f0 100%);
+  --gradient-accent: linear-gradient(135deg, #00edff 0%, #408dfe 100%);
+}
+
+[data-theme="lyoss-fusion-surge-panels"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  --accent-primary: #408dfe;
+  --accent-secondary: #d540f0;
+  --accent-tertiary: #00edff;
+  
+  --accent-success: #08f090;
+  --accent-warning: #ffc800;
+  --accent-error: #ff3050;
+  --accent-info: #00caff;
+  --accent-highlight: #a852f8;
+  
+  --gradient-primary: linear-gradient(135deg, #408dfe 0%, #d540f0 100%);
+  --gradient-accent: linear-gradient(135deg, #00edff 0%, #408dfe 100%);
+}
+
+/* ------------------------------------------------------------
+   💫 TEMA: LYOSS FUSION ELECTRIC (Escala 5 - Eléctrico)
    ------------------------------------------------------------ */
 [data-theme="lyoss-fusion-electric"] {
   --bg-primary: #191e24;
@@ -454,24 +559,21 @@
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  /* Nivel 2 - Colores eléctricos neón */
+  /* Nivel 5 - Electric */
   --accent-primary: #3b8bff;      /* Azul neón puro */
-  --accent-secondary: #d946ef;    /* Magenta/Fucsia vibrante */
+  --accent-secondary: #d946ef;    /* Magenta vibrante */
   --accent-tertiary: #00f5ff;     /* Cyan neón máximo */
   
-  --accent-success: #00ff88;      /* Verde neón */
-  --accent-warning: #ffc400;      /* Amarillo oro intenso */
-  --accent-error: #ff3366;        /* Rojo rosa eléctrico */
-  --accent-info: #00c8ff;         /* Cyan brillante */
-  --accent-highlight: #a855f7;    /* Púrpura vibrante */
+  --accent-success: #00ff88;
+  --accent-warning: #ffc400;
+  --accent-error: #ff3366;
+  --accent-info: #00c8ff;
+  --accent-highlight: #a855f7;
   
   --gradient-primary: linear-gradient(135deg, #3b8bff 0%, #d946ef 100%);
   --gradient-accent: linear-gradient(135deg, #00f5ff 0%, #3b8bff 100%);
 }
 
-/* ------------------------------------------------------------
-   💫 TEMA: LYOSS FUSION ELECTRIC PANELS
-   ------------------------------------------------------------ */
 [data-theme="lyoss-fusion-electric-panels"] {
   --bg-primary: #191e24;
   --bg-secondary: #1f242b;
@@ -499,9 +601,9 @@
 }
 
 /* ------------------------------------------------------------
-   ⚡ TEMA: LYOSS FUSION PLASMA (Escala 3 - Máxima Intensidad)
+   ⚡ TEMA: LYOSS FUSION FULL NEON (Escala 6 - Máximo Neón)
    ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-plasma"] {
+[data-theme="lyoss-fusion-neon"] {
   --bg-primary: #191e24;
   --bg-secondary: #1f242b;
   --bg-tertiary: #262c34;
@@ -513,25 +615,22 @@
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  /* Nivel 3 - Colores plasma ultra saturados */
-  --accent-primary: #2979ff;      /* Azul plasma */
-  --accent-secondary: #e040fb;    /* Magenta plasma */
-  --accent-tertiary: #18ffff;     /* Cyan plasma */
+  /* Nivel 6 - Full Neon (Máxima saturación) */
+  --accent-primary: #0080ff;      /* Azul neón puro 100% */
+  --accent-secondary: #ff00ff;    /* Magenta puro */
+  --accent-tertiary: #00ffff;     /* Cyan puro */
   
-  --accent-success: #00e676;      /* Verde plasma */
-  --accent-warning: #ffea00;      /* Amarillo plasma */
-  --accent-error: #ff1744;        /* Rojo plasma */
-  --accent-info: #00e5ff;         /* Cyan plasma claro */
-  --accent-highlight: #7c4dff;    /* Violeta plasma */
+  --accent-success: #00ff66;      /* Verde neón puro */
+  --accent-warning: #ffff00;      /* Amarillo neón puro */
+  --accent-error: #ff0055;        /* Rosa neón puro */
+  --accent-info: #00ddff;         /* Cyan neón puro */
+  --accent-highlight: #aa00ff;    /* Violeta neón puro */
   
-  --gradient-primary: linear-gradient(135deg, #2979ff 0%, #e040fb 100%);
-  --gradient-accent: linear-gradient(135deg, #18ffff 0%, #2979ff 100%);
+  --gradient-primary: linear-gradient(135deg, #0080ff 0%, #ff00ff 100%);
+  --gradient-accent: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
 }
 
-/* ------------------------------------------------------------
-   ⚡ TEMA: LYOSS FUSION PLASMA PANELS
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-plasma-panels"] {
+[data-theme="lyoss-fusion-neon-panels"] {
   --bg-primary: #191e24;
   --bg-secondary: #1f242b;
   --bg-tertiary: #262c34;
@@ -543,18 +642,18 @@
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  --accent-primary: #2979ff;
-  --accent-secondary: #e040fb;
-  --accent-tertiary: #18ffff;
+  --accent-primary: #0080ff;
+  --accent-secondary: #ff00ff;
+  --accent-tertiary: #00ffff;
   
-  --accent-success: #00e676;
-  --accent-warning: #ffea00;
-  --accent-error: #ff1744;
-  --accent-info: #00e5ff;
-  --accent-highlight: #7c4dff;
+  --accent-success: #00ff66;
+  --accent-warning: #ffff00;
+  --accent-error: #ff0055;
+  --accent-info: #00ddff;
+  --accent-highlight: #aa00ff;
   
-  --gradient-primary: linear-gradient(135deg, #2979ff 0%, #e040fb 100%);
-  --gradient-accent: linear-gradient(135deg, #18ffff 0%, #2979ff 100%);
+  --gradient-primary: linear-gradient(135deg, #0080ff 0%, #ff00ff 100%);
+  --gradient-accent: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
 }
 
 /* ============================================================
