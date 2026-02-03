@@ -2,4 +2,142 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout />
+<MainLayout title="Guía de Linux">
+  <article class="docs-content">
+    <h1>Comandos Básicos de Linux</h1>
+
+    <p class="intro">
+      Linux es un sistema operativo de código abierto que se ha convertido en la
+      base de servidores, supercomputadoras y dispositivos en todo el mundo.
+      Dominar la <a href="#">línea de comandos</a> es esencial para cualquier administrador
+      de sistemas o desarrollador.
+    </p>
+
+    <p>
+      Esta guía te enseñará los comandos fundamentales para navegar, gestionar
+      archivos y administrar tu sistema Linux de manera eficiente.
+    </p>
+
+    <h2>Navegación del sistema</h2>
+
+    <p>
+      Los comandos de navegación te permiten moverte por el sistema de archivos:
+    </p>
+
+    <ul>
+      <li>
+        <code>pwd</code> - Muestra el directorio de trabajo actual (Print Working
+        Directory).
+      </li>
+      <li>
+        <code>ls</code> - Lista el contenido de un directorio. Usa <code
+          >ls -la</code
+        > para ver archivos ocultos y permisos.
+      </li>
+      <li>
+        <code>cd</code> - Cambia de directorio. Usa <code>cd ..</code> para subir
+        un nivel o <code>cd ~</code> para ir al home.
+      </li>
+    </ul>
+
+    <h2>Gestión de archivos</h2>
+
+    <ol>
+      <li>
+        <code>touch archivo.txt</code> - Crea un archivo vacío o actualiza la fecha
+        de modificación.
+      </li>
+      <li>
+        <code>mkdir directorio</code> - Crea un nuevo directorio. Usa <code
+          >-p</code
+        > para crear directorios anidados.
+      </li>
+      <li>
+        <code>cp origen destino</code> - Copia archivos o directorios (usa <code
+          >-r</code
+        > para directorios).
+      </li>
+      <li>
+        <code>mv origen destino</code> - Mueve o renombra archivos y directorios.
+      </li>
+      <li>
+        <code>rm archivo</code> - Elimina archivos. Usa <code>rm -rf</code> con precaución
+        para directorios.
+      </li>
+    </ol>
+  </article>
+</MainLayout>
+
+<style>
+  .docs-content {
+    max-width: 100%;
+  }
+
+  .docs-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+
+  .docs-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 40px 0 16px 0;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+
+  .docs-content p {
+    margin: 0 0 16px 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .docs-content .intro {
+    font-size: 16px;
+    color: var(--text-secondary);
+  }
+
+  .docs-content a {
+    color: var(--accent-green);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .docs-content a:hover {
+    color: #4ade80;
+  }
+
+  .docs-content ul,
+  .docs-content ol {
+    margin: 0 0 16px 0;
+    padding-left: 24px;
+    color: var(--text-secondary);
+  }
+
+  .docs-content li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .docs-content ul li::marker {
+    color: var(--text-muted);
+  }
+
+  .docs-content ol li::marker {
+    color: var(--text-muted);
+  }
+
+  .docs-content code {
+    background: var(--bg-tertiary);
+    color: var(--accent-green);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 13px;
+  }
+</style>
