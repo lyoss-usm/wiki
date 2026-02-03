@@ -103,39 +103,39 @@
 }
 
 /* ------------------------------------------------------------
-   🌐 TEMA: LYOSS WEB (Paleta Web Oficial USM)
-   Paleta: Azul Institucional + Púrpura + Colores USM
-   Basado en la identidad visual de la web de Lyoss.
+   🌐 TEMA: LYOSS WEB (Paleta Web Oficial - Dark Mode)
+   Basado en DaisyUI dark theme de la web de Lyoss.
+   Colores OKLCH convertidos a HEX.
    ------------------------------------------------------------ */
 [data-theme="lyoss-web"] {
-  /* Fondos - Azul profundo institucional */
-  --bg-primary: #08203e;          /* lyoss-dark: El azul noche de la web */
-  --bg-secondary: #0d2847;        /* Azul ligeramente más claro */
-  --bg-tertiary: #123254;         /* Para cards e inputs */
-  --bg-hover: #1a3d5c;            /* Hover states */
-  --bg-nav: #08203e;              /* Nav igual al fondo */
-  --border-color: #004b8540;      /* Primary al 25% para bordes */
+  /* Fondos - base-100/200/300 del dark theme */
+  --bg-primary: #3b4252;          /* base-100: oklch(25.33% 0.016 252.42) */
+  --bg-secondary: #353b48;        /* base-200: oklch(23.26% 0.014 253.1) */
+  --bg-tertiary: #2e343f;         /* base-300: oklch(21.15% 0.012 254.09) */
+  --bg-hover: #434c5e;            /* Hover state */
+  --bg-nav: #3b4252;              /* Nav igual al fondo */
+  --border-color: #4c566a;        /* Borde sutil */
   
-  /* Textos */
-  --text-primary: #ffffff;        /* Blanco puro */
-  --text-secondary: #b8c5d6;      /* Gris azulado claro */
-  --text-muted: #6b7d94;          /* Gris azulado medio */
+  /* Textos - base-content */
+  --text-primary: #eceff4;        /* base-content: oklch(97.807% 0.029 256.847) */
+  --text-secondary: #d8dee9;      /* Gris claro */
+  --text-muted: #81a1c1;          /* Gris azulado */
   
-  /* Paleta de Acentos - Identidad Web USM */
-  --accent-primary: #004b85;      /* Azul institucional USM */
-  --accent-secondary: #8000ff;    /* Púrpura vibrante */
-  --accent-tertiary: #f7ae00;     /* Amarillo USM (warning) */
+  /* Paleta de Acentos */
+  --accent-primary: #5e81ac;      /* primary: oklch(48% 0.243 264.376) - Azul */
+  --accent-secondary: #bf616a;    /* secondary: oklch(63% 0.237 25.331) - Coral/Rojo */
+  --accent-tertiary: #ebcb8b;     /* accent: oklch(85% 0.199 91.936) - Dorado */
   
-  /* Estados Semánticos - Colores USM */
-  --accent-success: #008452;      /* Verde USM */
-  --accent-warning: #f7ae00;      /* Amarillo USM */
-  --accent-error: #d60019;        /* Rojo USM */
-  --accent-info: #004b85;         /* Azul primary */
-  --accent-highlight: #8000ff;    /* Púrpura para highlights */
+  /* Estados Semánticos */
+  --accent-success: #a3be8c;      /* success: oklch(76% 0.177 163.223) */
+  --accent-warning: #d08770;      /* warning: oklch(82% 0.189 84.429) */
+  --accent-error: #bf616a;        /* error: oklch(71% 0.194 13.428) */
+  --accent-info: #88c0d0;         /* info: oklch(74% 0.16 232.661) */
+  --accent-highlight: #b48ead;    /* Highlight púrpura */
   
   /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, #004b85 0%, #08203e 100%);
-  --gradient-accent: linear-gradient(135deg, #8000ff 0%, #004b85 100%);
+  --gradient-primary: linear-gradient(135deg, #5e81ac 0%, #3b4252 100%);
+  --gradient-accent: linear-gradient(135deg, #bf616a 0%, #5e81ac 100%);
 }
 
 /* ------------------------------------------------------------
@@ -144,29 +144,29 @@
    ------------------------------------------------------------ */
 [data-theme="lyoss-web-panels"] {
   /* Fondos */
-  --bg-primary: #08203e;
-  --bg-secondary: #0d2847;
-  --bg-tertiary: #123254;
-  --bg-hover: #1a3d5c;
-  --bg-nav: #0d2847;              /* Nav con color secundario */
-  --border-color: #004b8540;
+  --bg-primary: #3b4252;
+  --bg-secondary: #353b48;
+  --bg-tertiary: #2e343f;
+  --bg-hover: #434c5e;
+  --bg-nav: #353b48;              /* Nav con color secundario */
+  --border-color: #4c566a;
   
   /* Textos */
-  --text-primary: #ffffff;
-  --text-secondary: #b8c5d6;
-  --text-muted: #6b7d94;
+  --text-primary: #eceff4;
+  --text-secondary: #d8dee9;
+  --text-muted: #81a1c1;
   
   /* Paleta de Acentos */
-  --accent-primary: #004b85;
-  --accent-secondary: #8000ff;
-  --accent-tertiary: #f7ae00;
+  --accent-primary: #5e81ac;
+  --accent-secondary: #bf616a;
+  --accent-tertiary: #ebcb8b;
   
   /* Estados */
-  --accent-success: #008452;
-  --accent-warning: #f7ae00;
-  --accent-error: #d60019;
-  --accent-info: #004b85;
-  --accent-highlight: #8000ff;
+  --accent-success: #a3be8c;
+  --accent-warning: #d08770;
+  --accent-error: #bf616a;
+  --accent-info: #88c0d0;
+  --accent-highlight: #b48ead;
   
   /* Gradientes */
   --gradient-primary: linear-gradient(135deg, #004b85 0%, #08203e 100%);
