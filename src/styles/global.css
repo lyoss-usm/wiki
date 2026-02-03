@@ -315,6 +315,77 @@
   --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #c084fc 100%);
 }
 
+/* ------------------------------------------------------------
+   🌌 TEMA 4: LYOSS FUSION (Híbrido Web + Cyberpunk)
+   Paleta: Azul Web + Violeta/Cyan Cyberpunk + Fondo Custom
+   Combina la identidad de la web Lyoss con acentos cyberpunk.
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion"] {
+  /* Fondos - Base custom #191e24 */
+  --bg-primary: #191e24;          /* Fondo solicitado */
+  --bg-secondary: #1f242b;        /* Ligeramente más claro */
+  --bg-tertiary: #262c34;         /* Para cards */
+  --bg-hover: #2d333c;            /* Hover states */
+  --bg-nav: #191e24;              /* Nav igual al fondo */
+  --border-color: #3d4451;        /* Borde sutil */
+  
+  /* Textos */
+  --text-primary: #e5e9f0;        /* Blanco grisáceo suave */
+  --text-secondary: #9fa6b2;      /* Gris medio */
+  --text-muted: #6a7080;          /* Gris apagado */
+  
+  /* Paleta de Acentos - Fusión Web + Cyberpunk */
+  --accent-primary: #6b8dd6;      /* Azul web adaptado (más brillante que #5e81ac) */
+  --accent-secondary: #b77fdb;    /* Violeta suavizado (entre distro-hop y web) */
+  --accent-tertiary: #5dd4ed;     /* Cyan brillante adaptado */
+  
+  /* Estados Semánticos */
+  --accent-success: #7ed69d;      /* Verde suave */
+  --accent-warning: #e8c574;      /* Amarillo/dorado web adaptado */
+  --accent-error: #d98296;        /* Rosa/coral suavizado */
+  --accent-info: #78c4d8;         /* Cyan info */
+  --accent-highlight: #9b7dc4;    /* Violeta para highlights */
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #6b8dd6 0%, #b77fdb 100%);
+  --gradient-accent: linear-gradient(135deg, #5dd4ed 0%, #6b8dd6 100%);
+}
+
+/* ------------------------------------------------------------
+   🌌 TEMA 4B: LYOSS FUSION PANELS (Con Nav/Sidebar destacados)
+   Misma paleta híbrida con navegación diferenciada
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-panels"] {
+  /* Fondos */
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;              /* Nav con color secundario */
+  --border-color: #3d4451;
+  
+  /* Textos */
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Paleta de Acentos */
+  --accent-primary: #6b8dd6;
+  --accent-secondary: #b77fdb;
+  --accent-tertiary: #5dd4ed;
+  
+  /* Estados */
+  --accent-success: #7ed69d;
+  --accent-warning: #e8c574;
+  --accent-error: #d98296;
+  --accent-info: #78c4d8;
+  --accent-highlight: #9b7dc4;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #6b8dd6 0%, #b77fdb 100%);
+  --gradient-accent: linear-gradient(135deg, #5dd4ed 0%, #6b8dd6 100%);
+}
+
 /* ============================================================
    📝 ESTILOS BASE
    ============================================================ */
