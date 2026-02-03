@@ -20,7 +20,8 @@ const { title = "Docs" } = Astro.props;
     <title>{title} | Lyoss</title>
     <script is:inline>
       // Aplicar tema antes de que se renderice la página para evitar flash
-      const savedTheme = localStorage.getItem("wiki-theme") || "lyoss-core";
+      const savedTheme =
+        localStorage.getItem("wiki-theme") || "lyoss-fusion-vivid";
       document.documentElement.setAttribute("data-theme", savedTheme);
     </script>
   </head>
@@ -258,28 +259,38 @@ const { title = "Docs" } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 20px;
     z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .header-left {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
   }
 
   .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--text-primary);
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 16px;
     text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .logo svg {
+    color: var(--accent-primary);
   }
 
   .logo:hover {
     text-decoration: none;
+    background: var(--bg-hover);
   }
 
   .breadcrumb {
@@ -287,6 +298,8 @@ const { title = "Docs" } = Astro.props;
     align-items: center;
     gap: 8px;
     font-size: 14px;
+    padding-left: 12px;
+    border-left: 1px solid var(--border-color);
   }
 
   .breadcrumb-separator {
@@ -295,33 +308,40 @@ const { title = "Docs" } = Astro.props;
 
   .breadcrumb a {
     color: var(--text-secondary);
+    transition: color 0.2s ease;
   }
 
   .breadcrumb a:hover {
-    color: var(--text-primary);
+    color: var(--accent-primary);
   }
 
   .breadcrumb-current {
-    color: var(--text-secondary);
+    color: var(--text-muted);
   }
 
   .header-center {
     flex: 1;
     display: flex;
     justify-content: center;
-    max-width: 400px;
+    max-width: 480px;
     margin: 0 auto;
   }
 
   .search-box {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 6px 12px;
+    border-radius: 10px;
+    padding: 8px 14px;
     width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .search-box:focus-within {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--glow-primary, rgba(91, 156, 245, 0.15));
   }
 
   .search-icon {
@@ -342,57 +362,64 @@ const { title = "Docs" } = Astro.props;
   }
 
   .search-shortcut {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-muted);
-    background: var(--bg-hover);
-    padding: 2px 6px;
-    border-radius: 4px;
+    background: var(--bg-secondary);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
   }
 
   .header-right {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
 
   .header-btn {
     display: flex;
     align-items: center;
     gap: 6px;
-    background: transparent;
+    background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 6px 10px;
+    border-radius: 8px;
+    padding: 8px 12px;
     color: var(--text-secondary);
     font-size: 13px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all 0.2s ease;
   }
 
   .header-btn:hover {
     background: var(--bg-hover);
     color: var(--text-primary);
+    border-color: var(--accent-primary);
   }
 
   .icon-btn {
-    padding: 6px 8px;
+    padding: 8px 10px;
   }
 
   .signup-btn {
-    background: var(--accent-green);
-    color: #000;
+    background: var(--gradient-primary);
+    color: var(--bg-primary);
     border: none;
-    border-radius: 6px;
-    padding: 6px 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
+    transition: all 0.2s ease;
   }
 
   .signup-btn:hover {
     opacity: 0.9;
     text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--glow-primary, rgba(91, 156, 245, 0.3));
   }
 
   /* Main Container */
@@ -405,15 +432,15 @@ const { title = "Docs" } = Astro.props;
   /* Content */
   .content {
     flex: 1;
-    padding: 40px 60px;
-    max-width: 800px;
+    padding: 48px 64px;
+    max-width: 850px;
     margin: 0 auto;
   }
 
   /* Right Sidebar */
   .right-sidebar {
-    width: 240px;
-    padding: 24px 16px;
+    width: 260px;
+    padding: 28px 20px;
     border-left: 1px solid var(--border-color);
     position: sticky;
     top: 56px;
@@ -422,40 +449,60 @@ const { title = "Docs" } = Astro.props;
     background: var(--bg-primary);
   }
 
+  /* Scrollbar para right-sidebar */
+  .right-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .right-sidebar::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+  }
+
   .toc-section {
-    margin-bottom: 24px;
-    padding-bottom: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
   }
 
   .toc-tree {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .toc-parent {
     font-size: 13px;
-    color: var(--text-secondary);
-    padding: 4px 0;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 6px 0;
   }
 
   .toc-branch {
-    margin-left: 8px;
+    margin-left: 12px;
+    border-left: 1px solid var(--border-color);
+    padding-left: 12px;
   }
 
   .toc-child {
     font-size: 12px;
-    color: var(--text-muted);
-    padding: 2px 0;
+    color: var(--text-secondary);
+    padding: 4px 0;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    transition: color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .toc-child:hover {
+    color: var(--accent-primary);
   }
 
   .tree-line {
-    font-family: monospace;
-    color: var(--border-color);
-    font-size: 11px;
+    font-family: var(--font-mono);
+    color: var(--accent-tertiary);
+    font-size: 10px;
     user-select: none;
+    opacity: 0.6;
   }
 
   .share-section {
@@ -467,22 +514,27 @@ const { title = "Docs" } = Astro.props;
   .share-link {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 6px 8px;
+    gap: 12px;
+    padding: 8px 10px;
     color: var(--text-secondary);
     font-size: 13px;
-    border-radius: 4px;
-    transition: all 0.15s;
+    border-radius: 8px;
+    transition: all 0.2s ease;
   }
 
   .share-link:hover {
     background: var(--bg-hover);
-    color: var(--text-primary);
+    color: var(--accent-primary);
     text-decoration: none;
   }
 
   .share-link svg {
-    opacity: 0.7;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+
+  .share-link:hover svg {
+    opacity: 1;
   }
 
   /* Responsive */

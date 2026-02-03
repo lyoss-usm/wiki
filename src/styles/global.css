@@ -30,15 +30,14 @@
   --radius-lg: 8px;
 }
 
-/* ------------------------------------------------------------
-   🐧 TEMA 1: LYOSS CORE (Identidad Oficial)
 /* ============================================================
-   🌌 FAMILIA LYOSS FUSION - ESCALAS DE INTENSIDAD
-   Escala de 6 niveles: Vivid → Intense → Radiant → Surge → Electric → Full Neon
+   🌌 TEMAS LYOSS FUSION - VIVID & ELECTRIC
+   Solo 2 variantes principales con opción de paneles
    ============================================================ */
 
 /* ------------------------------------------------------------
-   🌌 TEMA: LYOSS FUSION VIVID (Escala 1 - Base Vívido) - DEFAULT
+   🌌 TEMA: LYOSS FUSION VIVID (Por defecto)
+   Colores vívidos pero equilibrados, ideal para uso prolongado
    ------------------------------------------------------------ */
 :root,
 [data-theme="lyoss-fusion-vivid"] {
@@ -47,13 +46,15 @@
   --bg-tertiary: #262c34;
   --bg-hover: #2d333c;
   --bg-nav: #191e24;
+  --bg-card: #1c2128;
   --border-color: #3d4451;
+  --border-subtle: #2d333c;
   
   --text-primary: #e5e9f0;
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  /* Nivel 1 - Vívido */
+  /* Acentos Vívidos */
   --accent-primary: #5b9cf5;
   --accent-secondary: #b855f5;
   --accent-tertiary: #00d4ff;
@@ -64,8 +65,16 @@
   --accent-info: #00b8e6;
   --accent-highlight: #9055e8;
   
+  /* Efectos */
+  --glow-primary: rgba(91, 156, 245, 0.15);
+  --glow-secondary: rgba(184, 85, 245, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
   --gradient-primary: linear-gradient(135deg, #5b9cf5 0%, #b855f5 100%);
   --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #5b9cf5 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 [data-theme="lyoss-fusion-vivid-panels"] {
@@ -74,7 +83,9 @@
   --bg-tertiary: #262c34;
   --bg-hover: #2d333c;
   --bg-nav: #1f242b;
+  --bg-card: #1c2128;
   --border-color: #3d4451;
+  --border-subtle: #2d333c;
   
   --text-primary: #e5e9f0;
   --text-secondary: #9fa6b2;
@@ -90,180 +101,20 @@
   --accent-info: #00b8e6;
   --accent-highlight: #9055e8;
   
+  --glow-primary: rgba(91, 156, 245, 0.15);
+  --glow-secondary: rgba(184, 85, 245, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
   --gradient-primary: linear-gradient(135deg, #5b9cf5 0%, #b855f5 100%);
   --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #5b9cf5 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 /* ------------------------------------------------------------
-   ✨ TEMA: LYOSS FUSION INTENSE (Escala 2 - Intermedio 1)
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-intense"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #191e24;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  /* Nivel 2 - Intense (25% hacia Electric) */
-  --accent-primary: #4e94fa;      /* Azul más brillante */
-  --accent-secondary: #c44df2;    /* Violeta más magenta */
-  --accent-tertiary: #00dcff;     /* Cyan más puro */
-  
-  --accent-success: #1ae080;
-  --accent-warning: #ffb810;
-  --accent-error: #ff4060;
-  --accent-info: #00c0f0;
-  --accent-highlight: #9850f0;
-  
-  --gradient-primary: linear-gradient(135deg, #4e94fa 0%, #c44df2 100%);
-  --gradient-accent: linear-gradient(135deg, #00dcff 0%, #4e94fa 100%);
-}
-
-[data-theme="lyoss-fusion-intense-panels"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #1f242b;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  --accent-primary: #4e94fa;
-  --accent-secondary: #c44df2;
-  --accent-tertiary: #00dcff;
-  
-  --accent-success: #1ae080;
-  --accent-warning: #ffb810;
-  --accent-error: #ff4060;
-  --accent-info: #00c0f0;
-  --accent-highlight: #9850f0;
-  
-  --gradient-primary: linear-gradient(135deg, #4e94fa 0%, #c44df2 100%);
-  --gradient-accent: linear-gradient(135deg, #00dcff 0%, #4e94fa 100%);
-}
-
-/* ------------------------------------------------------------
-   💎 TEMA: LYOSS FUSION RADIANT (Escala 3 - Intermedio 2)
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-radiant"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #191e24;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  /* Nivel 3 - Radiant (50% entre Vivid y Electric) */
-  --accent-primary: #4890fd;      /* Azul radiante */
-  --accent-secondary: #cf46f0;    /* Magenta radiante */
-  --accent-tertiary: #00e5ff;     /* Cyan radiante */
-  
-  --accent-success: #10e888;
-  --accent-warning: #ffc000;
-  --accent-error: #ff3858;
-  --accent-info: #00c5f8;
-  --accent-highlight: #a050f5;
-  
-  --gradient-primary: linear-gradient(135deg, #4890fd 0%, #cf46f0 100%);
-  --gradient-accent: linear-gradient(135deg, #00e5ff 0%, #4890fd 100%);
-}
-
-[data-theme="lyoss-fusion-radiant-panels"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #1f242b;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  --accent-primary: #4890fd;
-  --accent-secondary: #cf46f0;
-  --accent-tertiary: #00e5ff;
-  
-  --accent-success: #10e888;
-  --accent-warning: #ffc000;
-  --accent-error: #ff3858;
-  --accent-info: #00c5f8;
-  --accent-highlight: #a050f5;
-  
-  --gradient-primary: linear-gradient(135deg, #4890fd 0%, #cf46f0 100%);
-  --gradient-accent: linear-gradient(135deg, #00e5ff 0%, #4890fd 100%);
-}
-
-/* ------------------------------------------------------------
-   🔥 TEMA: LYOSS FUSION SURGE (Escala 4 - Intermedio 3)
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-surge"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #191e24;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  /* Nivel 4 - Surge (75% hacia Electric) */
-  --accent-primary: #408dfe;      /* Azul surge */
-  --accent-secondary: #d540f0;    /* Magenta surge */
-  --accent-tertiary: #00edff;     /* Cyan surge */
-  
-  --accent-success: #08f090;
-  --accent-warning: #ffc800;
-  --accent-error: #ff3050;
-  --accent-info: #00caff;
-  --accent-highlight: #a852f8;
-  
-  --gradient-primary: linear-gradient(135deg, #408dfe 0%, #d540f0 100%);
-  --gradient-accent: linear-gradient(135deg, #00edff 0%, #408dfe 100%);
-}
-
-[data-theme="lyoss-fusion-surge-panels"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #1f242b;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  --accent-primary: #408dfe;
-  --accent-secondary: #d540f0;
-  --accent-tertiary: #00edff;
-  
-  --accent-success: #08f090;
-  --accent-warning: #ffc800;
-  --accent-error: #ff3050;
-  --accent-info: #00caff;
-  --accent-highlight: #a852f8;
-  
-  --gradient-primary: linear-gradient(135deg, #408dfe 0%, #d540f0 100%);
-  --gradient-accent: linear-gradient(135deg, #00edff 0%, #408dfe 100%);
-}
-
-/* ------------------------------------------------------------
-   💫 TEMA: LYOSS FUSION ELECTRIC (Escala 5 - Eléctrico)
+   💫 TEMA: LYOSS FUSION ELECTRIC
+   Colores neón intensos, máximo impacto visual
    ------------------------------------------------------------ */
 [data-theme="lyoss-fusion-electric"] {
   --bg-primary: #191e24;
@@ -271,16 +122,18 @@
   --bg-tertiary: #262c34;
   --bg-hover: #2d333c;
   --bg-nav: #191e24;
+  --bg-card: #1c2128;
   --border-color: #3d4451;
+  --border-subtle: #2d333c;
   
   --text-primary: #e5e9f0;
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  /* Nivel 5 - Electric */
-  --accent-primary: #3b8bff;      /* Azul neón puro */
-  --accent-secondary: #d946ef;    /* Magenta vibrante */
-  --accent-tertiary: #00f5ff;     /* Cyan neón máximo */
+  /* Acentos Eléctricos - Neón Intenso */
+  --accent-primary: #3b8bff;
+  --accent-secondary: #d946ef;
+  --accent-tertiary: #00f5ff;
   
   --accent-success: #00ff88;
   --accent-warning: #ffc400;
@@ -288,8 +141,16 @@
   --accent-info: #00c8ff;
   --accent-highlight: #a855f7;
   
+  /* Efectos Eléctricos - Glow más intenso */
+  --glow-primary: rgba(59, 139, 255, 0.25);
+  --glow-secondary: rgba(217, 70, 239, 0.25);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 20px var(--glow-primary);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 40px var(--glow-primary);
+  
   --gradient-primary: linear-gradient(135deg, #3b8bff 0%, #d946ef 100%);
   --gradient-accent: linear-gradient(135deg, #00f5ff 0%, #3b8bff 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 [data-theme="lyoss-fusion-electric-panels"] {
@@ -298,7 +159,9 @@
   --bg-tertiary: #262c34;
   --bg-hover: #2d333c;
   --bg-nav: #1f242b;
+  --bg-card: #1c2128;
   --border-color: #3d4451;
+  --border-subtle: #2d333c;
   
   --text-primary: #e5e9f0;
   --text-secondary: #9fa6b2;
@@ -314,64 +177,15 @@
   --accent-info: #00c8ff;
   --accent-highlight: #a855f7;
   
+  --glow-primary: rgba(59, 139, 255, 0.25);
+  --glow-secondary: rgba(217, 70, 239, 0.25);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 20px var(--glow-primary);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 40px var(--glow-primary);
+  
   --gradient-primary: linear-gradient(135deg, #3b8bff 0%, #d946ef 100%);
   --gradient-accent: linear-gradient(135deg, #00f5ff 0%, #3b8bff 100%);
-}
-
-/* ------------------------------------------------------------
-   ⚡ TEMA: LYOSS FUSION FULL NEON (Escala 6 - Máximo Neón)
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-neon"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #191e24;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  /* Nivel 6 - Full Neon (Máxima saturación) */
-  --accent-primary: #0080ff;      /* Azul neón puro 100% */
-  --accent-secondary: #ff00ff;    /* Magenta puro */
-  --accent-tertiary: #00ffff;     /* Cyan puro */
-  
-  --accent-success: #00ff66;      /* Verde neón puro */
-  --accent-warning: #ffff00;      /* Amarillo neón puro */
-  --accent-error: #ff0055;        /* Rosa neón puro */
-  --accent-info: #00ddff;         /* Cyan neón puro */
-  --accent-highlight: #aa00ff;    /* Violeta neón puro */
-  
-  --gradient-primary: linear-gradient(135deg, #0080ff 0%, #ff00ff 100%);
-  --gradient-accent: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
-}
-
-[data-theme="lyoss-fusion-neon-panels"] {
-  --bg-primary: #191e24;
-  --bg-secondary: #1f242b;
-  --bg-tertiary: #262c34;
-  --bg-hover: #2d333c;
-  --bg-nav: #1f242b;
-  --border-color: #3d4451;
-  
-  --text-primary: #e5e9f0;
-  --text-secondary: #9fa6b2;
-  --text-muted: #6a7080;
-  
-  --accent-primary: #0080ff;
-  --accent-secondary: #ff00ff;
-  --accent-tertiary: #00ffff;
-  
-  --accent-success: #00ff66;
-  --accent-warning: #ffff00;
-  --accent-error: #ff0055;
-  --accent-info: #00ddff;
-  --accent-highlight: #aa00ff;
-  
-  --gradient-primary: linear-gradient(135deg, #0080ff 0%, #ff00ff 100%);
-  --gradient-accent: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 /* ============================================================
@@ -399,9 +213,33 @@ body {
 /* Headings con fuente específica para títulos */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
   color: var(--text-primary);
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 1.875rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 /* Código y elementos técnicos */
@@ -413,36 +251,53 @@ code, pre, kbd, samp {
 pre {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 1.25rem;
   overflow-x: auto;
+  position: relative;
+}
+
+pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 12px 12px 0 0;
 }
 
 code {
   background-color: var(--bg-tertiary);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  color: var(--accent-tertiary);
 }
 
 pre code {
   background: none;
   padding: 0;
+  color: var(--text-primary);
+}
+
+pre code::before {
+  display: none;
 }
 
 a {
   color: var(--accent-primary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   color: var(--accent-secondary);
-  text-decoration: underline;
 }
 
 /* Párrafos legibles */
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: var(--text-secondary);
 }
 
@@ -450,10 +305,21 @@ p {
 ul, ol {
   color: var(--text-secondary);
   padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 li {
   margin-bottom: 0.5rem;
+  position: relative;
+}
+
+ul li::marker {
+  color: var(--accent-primary);
+}
+
+ol li::marker {
+  color: var(--accent-secondary);
+  font-weight: 600;
 }
 
 /* Scrollbar styling - con color de acento */
@@ -489,99 +355,230 @@ li {
 }
 
 /* ============================================================
-   🎨 UTILIDADES DE COLOR DE ACENTO
+   🎨 UTILIDADES DE COLOR Y COMPONENTES
    ============================================================ */
 
 /* Badges/Tags */
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.875rem;
   border-radius: 9999px;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  transition: all 0.2s ease;
 }
 
 .badge-primary {
-  background: color-mix(in srgb, var(--accent-primary) 20%, transparent);
+  background: color-mix(in srgb, var(--accent-primary) 15%, transparent);
   color: var(--accent-primary);
   border: 1px solid color-mix(in srgb, var(--accent-primary) 30%, transparent);
 }
 
+.badge-primary:hover {
+  background: color-mix(in srgb, var(--accent-primary) 25%, transparent);
+}
+
+.badge-secondary {
+  background: color-mix(in srgb, var(--accent-secondary) 15%, transparent);
+  color: var(--accent-secondary);
+  border: 1px solid color-mix(in srgb, var(--accent-secondary) 30%, transparent);
+}
+
 .badge-success {
-  background: color-mix(in srgb, var(--accent-success) 20%, transparent);
+  background: color-mix(in srgb, var(--accent-success) 15%, transparent);
   color: var(--accent-success);
   border: 1px solid color-mix(in srgb, var(--accent-success) 30%, transparent);
 }
 
 .badge-warning {
-  background: color-mix(in srgb, var(--accent-warning) 20%, transparent);
+  background: color-mix(in srgb, var(--accent-warning) 15%, transparent);
   color: var(--accent-warning);
   border: 1px solid color-mix(in srgb, var(--accent-warning) 30%, transparent);
 }
 
 .badge-error {
-  background: color-mix(in srgb, var(--accent-error) 20%, transparent);
+  background: color-mix(in srgb, var(--accent-error) 15%, transparent);
   color: var(--accent-error);
   border: 1px solid color-mix(in srgb, var(--accent-error) 30%, transparent);
 }
 
-/* Botones con gradiente */
-.btn-gradient {
-  background: var(--gradient-primary);
-  color: var(--bg-primary);
+.badge-info {
+  background: color-mix(in srgb, var(--accent-info) 15%, transparent);
+  color: var(--accent-info);
+  border: 1px solid color-mix(in srgb, var(--accent-info) 30%, transparent);
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-size: 14px;
 }
 
-.btn-gradient:hover {
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--bg-primary);
+}
+
+.btn-primary:hover {
   filter: brightness(1.1);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-/* Cajas de información */
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.btn-ghost:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* Cards */
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px var(--glow-primary);
+}
+
+/* Cajas de información / Callouts */
 .callout {
-  padding: 1rem 1.25rem;
-  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
   border-left: 4px solid;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  background: var(--bg-secondary);
+}
+
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .callout-info {
-  background: color-mix(in srgb, var(--accent-info) 10%, var(--bg-secondary));
   border-color: var(--accent-info);
 }
 
+.callout-info .callout-title {
+  color: var(--accent-info);
+}
+
 .callout-success {
-  background: color-mix(in srgb, var(--accent-success) 10%, var(--bg-secondary));
   border-color: var(--accent-success);
 }
 
+.callout-success .callout-title {
+  color: var(--accent-success);
+}
+
 .callout-warning {
-  background: color-mix(in srgb, var(--accent-warning) 10%, var(--bg-secondary));
   border-color: var(--accent-warning);
 }
 
+.callout-warning .callout-title {
+  color: var(--accent-warning);
+}
+
 .callout-error {
-  background: color-mix(in srgb, var(--accent-error) 10%, var(--bg-secondary));
   border-color: var(--accent-error);
 }
 
-/* Highlight de código inline */
-code {
-  color: var(--accent-tertiary);
+.callout-error .callout-title {
+  color: var(--accent-error);
 }
 
-/* Links con subrayado animado */
-a {
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+tr:hover td {
+  background: var(--bg-hover);
+}
+
+/* Inputs */
+.input {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-size: 14px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--glow-primary);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Links con subrayado animado (para contenido, no nav) */
+.content a:not(.no-underline) {
   position: relative;
 }
 
-a:not(.no-underline)::after {
+.content a:not(.no-underline)::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -590,19 +587,11 @@ a:not(.no-underline)::after {
   height: 2px;
   background: var(--gradient-primary);
   transition: width 0.3s ease;
+  border-radius: 1px;
 }
 
-a:not(.no-underline):hover::after {
+.content a:not(.no-underline):hover::after {
   width: 100%;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* Bordes con acento */
-.border-accent {
-  border-color: var(--accent-primary);
 }
 
 /* Texto con gradiente */
@@ -615,9 +604,31 @@ a:hover {
 
 /* Glow effect para elementos destacados */
 .glow {
-  box-shadow: 0 0 20px color-mix(in srgb, var(--accent-primary) 30%, transparent);
+  box-shadow: 0 0 20px var(--glow-primary);
 }
 
 .glow-hover:hover {
-  box-shadow: 0 0 25px color-mix(in srgb, var(--accent-primary) 40%, transparent);
+  box-shadow: 0 0 30px var(--glow-primary);
+}
+
+/* Separadores */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--gradient-primary);
+  margin: 2rem 0;
+  opacity: 0.3;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--accent-secondary);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: 0;
 }
