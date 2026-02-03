@@ -316,52 +316,17 @@
 }
 
 /* ------------------------------------------------------------
-   🌌 TEMA 4: LYOSS FUSION (Híbrido Web + Cyberpunk)
+   🌌 TEMA: LYOSS FUSION (Híbrido Web + Cyberpunk - Base)
    Paleta: Azul Web + Violeta/Cyan Cyberpunk + Fondo Custom
    Combina la identidad de la web Lyoss con acentos cyberpunk.
    ------------------------------------------------------------ */
 [data-theme="lyoss-fusion"] {
   /* Fondos - Base custom #191e24 */
-  --bg-primary: #191e24;          /* Fondo solicitado */
-  --bg-secondary: #1f242b;        /* Ligeramente más claro */
-  --bg-tertiary: #262c34;         /* Para cards */
-  --bg-hover: #2d333c;            /* Hover states */
-  --bg-nav: #191e24;              /* Nav igual al fondo */
-  --border-color: #3d4451;        /* Borde sutil */
-  
-  /* Textos */
-  --text-primary: #e5e9f0;        /* Blanco grisáceo suave */
-  --text-secondary: #9fa6b2;      /* Gris medio */
-  --text-muted: #6a7080;          /* Gris apagado */
-  
-  /* Paleta de Acentos - Fusión Web + Cyberpunk */
-  --accent-primary: #6b8dd6;      /* Azul web adaptado (más brillante que #5e81ac) */
-  --accent-secondary: #b77fdb;    /* Violeta suavizado (entre distro-hop y web) */
-  --accent-tertiary: #5dd4ed;     /* Cyan brillante adaptado */
-  
-  /* Estados Semánticos */
-  --accent-success: #7ed69d;      /* Verde suave */
-  --accent-warning: #e8c574;      /* Amarillo/dorado web adaptado */
-  --accent-error: #d98296;        /* Rosa/coral suavizado */
-  --accent-info: #78c4d8;         /* Cyan info */
-  --accent-highlight: #9b7dc4;    /* Violeta para highlights */
-  
-  /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, #6b8dd6 0%, #b77fdb 100%);
-  --gradient-accent: linear-gradient(135deg, #5dd4ed 0%, #6b8dd6 100%);
-}
-
-/* ------------------------------------------------------------
-   🌌 TEMA 4B: LYOSS FUSION PANELS (Con Nav/Sidebar destacados)
-   Misma paleta híbrida con navegación diferenciada
-   ------------------------------------------------------------ */
-[data-theme="lyoss-fusion-panels"] {
-  /* Fondos */
   --bg-primary: #191e24;
   --bg-secondary: #1f242b;
   --bg-tertiary: #262c34;
   --bg-hover: #2d333c;
-  --bg-nav: #1f242b;              /* Nav con color secundario */
+  --bg-nav: #191e24;
   --border-color: #3d4451;
   
   /* Textos */
@@ -369,21 +334,227 @@
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  /* Paleta de Acentos (Más neón) */
-  --accent-primary: #7ea3f0;
-  --accent-secondary: #cd8ff0;
-  --accent-tertiary: #6eeaff;
+  /* Paleta de Acentos - Nivel 1 (Más brillante que antes) */
+  --accent-primary: #8aa8e8;      /* Azul brillante */
+  --accent-secondary: #c98ff0;    /* Violeta vibrante */
+  --accent-tertiary: #70e0f5;     /* Cyan luminoso */
   
-  /* Estados (Más brillantes) */
-  --accent-success: #8cf0b5;
-  --accent-warning: #ffd685;
-  --accent-error: #f08da2;
-  --accent-info: #8ad8f0;
-  --accent-highlight: #b08de0;
+  /* Estados Semánticos */
+  --accent-success: #8ce8b0;      /* Verde brillante */
+  --accent-warning: #f5d080;      /* Amarillo dorado */
+  --accent-error: #f08da0;        /* Rosa coral */
+  --accent-info: #85d0e8;         /* Cyan info */
+  --accent-highlight: #b090d8;    /* Violeta highlight */
   
   /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, #7ea3f0 0%, #cd8ff0 100%);
-  --gradient-accent: linear-gradient(135deg, #6eeaff 0%, #7ea3f0 100%);
+  --gradient-primary: linear-gradient(135deg, #8aa8e8 0%, #c98ff0 100%);
+  --gradient-accent: linear-gradient(135deg, #70e0f5 0%, #8aa8e8 100%);
+}
+
+/* ------------------------------------------------------------
+   🌌 TEMA: LYOSS FUSION PANELS (Con Nav/Sidebar destacados)
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-panels"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  --accent-primary: #8aa8e8;
+  --accent-secondary: #c98ff0;
+  --accent-tertiary: #70e0f5;
+  
+  --accent-success: #8ce8b0;
+  --accent-warning: #f5d080;
+  --accent-error: #f08da0;
+  --accent-info: #85d0e8;
+  --accent-highlight: #b090d8;
+  
+  --gradient-primary: linear-gradient(135deg, #8aa8e8 0%, #c98ff0 100%);
+  --gradient-accent: linear-gradient(135deg, #70e0f5 0%, #8aa8e8 100%);
+}
+
+/* ------------------------------------------------------------
+   ✨ TEMA: LYOSS FUSION BRIGHT (Escala +1 Brillo)
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-bright"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Nivel 2 - Más brillante */
+  --accent-primary: #9dbaf5;      /* Azul más luminoso */
+  --accent-secondary: #d9a5ff;    /* Violeta pastel brillante */
+  --accent-tertiary: #85f0ff;     /* Cyan eléctrico */
+  
+  --accent-success: #a0f5c5;      /* Verde menta brillante */
+  --accent-warning: #ffe090;      /* Amarillo limón */
+  --accent-error: #ffa0b5;        /* Rosa chicle */
+  --accent-info: #95e0f5;         /* Cyan claro */
+  --accent-highlight: #c5a5f0;    /* Lavanda */
+  
+  --gradient-primary: linear-gradient(135deg, #9dbaf5 0%, #d9a5ff 100%);
+  --gradient-accent: linear-gradient(135deg, #85f0ff 0%, #9dbaf5 100%);
+}
+
+/* ------------------------------------------------------------
+   ✨ TEMA: LYOSS FUSION BRIGHT PANELS
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-bright-panels"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  --accent-primary: #9dbaf5;
+  --accent-secondary: #d9a5ff;
+  --accent-tertiary: #85f0ff;
+  
+  --accent-success: #a0f5c5;
+  --accent-warning: #ffe090;
+  --accent-error: #ffa0b5;
+  --accent-info: #95e0f5;
+  --accent-highlight: #c5a5f0;
+  
+  --gradient-primary: linear-gradient(135deg, #9dbaf5 0%, #d9a5ff 100%);
+  --gradient-accent: linear-gradient(135deg, #85f0ff 0%, #9dbaf5ff 100%);
+}
+
+/* ------------------------------------------------------------
+   💫 TEMA: LYOSS FUSION NEON (Escala +2 Brillo)
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-neon"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Nivel 3 - Neón vibrante */
+  --accent-primary: #b0ccff;      /* Azul cielo neón */
+  --accent-secondary: #e8b8ff;    /* Violeta neón */
+  --accent-tertiary: #99ffff;     /* Cyan neón puro */
+  
+  --accent-success: #b5ffd8;      /* Verde neón menta */
+  --accent-warning: #fff0a0;      /* Amarillo neón */
+  --accent-error: #ffb0c8;        /* Rosa neón */
+  --accent-info: #a8f0ff;         /* Cyan neón claro */
+  --accent-highlight: #d5b8ff;    /* Lavanda neón */
+  
+  --gradient-primary: linear-gradient(135deg, #b0ccff 0%, #e8b8ff 100%);
+  --gradient-accent: linear-gradient(135deg, #99ffff 0%, #b0ccff 100%);
+}
+
+/* ------------------------------------------------------------
+   💫 TEMA: LYOSS FUSION NEON PANELS
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-neon-panels"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  --accent-primary: #b0ccff;
+  --accent-secondary: #e8b8ff;
+  --accent-tertiary: #99ffff;
+  
+  --accent-success: #b5ffd8;
+  --accent-warning: #fff0a0;
+  --accent-error: #ffb0c8;
+  --accent-info: #a8f0ff;
+  --accent-highlight: #d5b8ff;
+  
+  --gradient-primary: linear-gradient(135deg, #b0ccff 0%, #e8b8ff 100%);
+  --gradient-accent: linear-gradient(135deg, #99ffff 0%, #b0ccff 100%);
+}
+
+/* ------------------------------------------------------------
+   ⚡ TEMA: LYOSS FUSION ULTRA (Escala +3 Máximo Brillo)
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-ultra"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Nivel 4 - Ultra brillante (casi pastel luminoso) */
+  --accent-primary: #c5ddff;      /* Azul hielo */
+  --accent-secondary: #f5d0ff;    /* Rosa lavanda */
+  --accent-tertiary: #b0ffff;     /* Cyan máximo */
+  
+  --accent-success: #c8ffe8;      /* Verde menta pastel */
+  --accent-warning: #ffffc0;      /* Amarillo crema */
+  --accent-error: #ffc8d8;        /* Rosa bebé */
+  --accent-info: #c0f8ff;         /* Cyan hielo */
+  --accent-highlight: #e5d0ff;    /* Lavanda pastel */
+  
+  --gradient-primary: linear-gradient(135deg, #c5ddff 0%, #f5d0ff 100%);
+  --gradient-accent: linear-gradient(135deg, #b0ffff 0%, #c5ddff 100%);
+}
+
+/* ------------------------------------------------------------
+   ⚡ TEMA: LYOSS FUSION ULTRA PANELS
+   ------------------------------------------------------------ */
+[data-theme="lyoss-fusion-ultra-panels"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --border-color: #3d4451;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  --accent-primary: #c5ddff;
+  --accent-secondary: #f5d0ff;
+  --accent-tertiary: #b0ffff;
+  
+  --accent-success: #c8ffe8;
+  --accent-warning: #ffffc0;
+  --accent-error: #ffc8d8;
+  --accent-info: #c0f8ff;
+  --accent-highlight: #e5d0ff;
+  
+  --gradient-primary: linear-gradient(135deg, #c5ddff 0%, #f5d0ff 100%);
+  --gradient-accent: linear-gradient(135deg, #b0ffff 0%, #c5ddff 100%);
 }
 
 /* ============================================================
