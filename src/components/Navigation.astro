@@ -1,7 +1,221 @@
 ---
-
+const navigationItems = [
+  {
+    title: "Linux",
+    icon: "terminal",
+    items: [{ label: "Introducción", href: "/linux/intro", active: true }],
+  },
+  {
+    title: "FUNDAMENTOS",
+    isSection: true,
+    items: [
+      {
+        label: "¿Qué es Linux?",
+        href: "/fundamentos/que-es-linux",
+        active: false,
+      },
+      {
+        label: "Instalación del sistema",
+        href: "/fundamentos/instalacion",
+        active: false,
+      },
+      {
+        label: "La terminal y el shell",
+        href: "/fundamentos/terminal",
+        active: false,
+      },
+    ],
+  },
+  {
+    title: "COMANDOS BÁSICOS",
+    isSection: true,
+    items: [
+      {
+        label: "Navegación del sistema de archivos",
+        href: "/comandos/navegacion",
+        active: false,
+      },
+      {
+        label: "Gestión de archivos y directorios",
+        href: "/comandos/archivos",
+        active: false,
+      },
+      {
+        label: "Visualización de contenido",
+        href: "/comandos/visualizacion",
+        active: false,
+      },
+      {
+        label: "Búsqueda y filtrado",
+        href: "/comandos/busqueda",
+        active: false,
+      },
+      {
+        label: "Redirección y pipes",
+        href: "/comandos/redireccion",
+        active: false,
+      },
+    ],
+  },
+  {
+    title: "ADMINISTRACIÓN DEL SISTEMA",
+    isSection: true,
+    items: [
+      { label: "Gestión de paquetes", href: "/admin/paquetes", active: false },
+      { label: "Usuarios y grupos", href: "/admin/usuarios", active: false },
+      { label: "Permisos de archivos", href: "/admin/permisos", active: false },
+      { label: "Procesos y servicios", href: "/admin/procesos", active: false },
+      { label: "Redes y conectividad", href: "/admin/redes", active: false },
+      {
+        label: "Configuración del sistema",
+        href: "/admin/configuracion",
+        active: false,
+      },
+    ],
+  },
+];
 ---
 
-<header>
-  <nav></nav>
-</header>
+<aside class="sidebar">
+  <nav class="nav">
+    {
+      navigationItems.map((section) => (
+        <div class="nav-section">
+          {section.isSection ? (
+            <div class="section-title">{section.title}</div>
+          ) : (
+            <a href={section.items[0]?.href || "#"} class="nav-header">
+              <span class="nav-icon">
+                {section.icon === "terminal" && (
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="4 17 10 11 4 5" />
+                    <line x1="12" y1="19" x2="20" y2="19" />
+                  </svg>
+                )}
+              </span>
+              <span class="nav-label">{section.title}</span>
+            </a>
+          )}
+          <ul class="nav-list">
+            {section.items.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class:list={["nav-link", { active: item.active ?? false }]}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </nav>
+</aside>
+
+<style>
+  .sidebar {
+    width: 260px;
+    min-width: 260px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    height: calc(100vh - 56px);
+    position: sticky;
+    top: 56px;
+    overflow-y: auto;
+    padding: 16px 0;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-section {
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px 20px 8px;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .nav-header:hover {
+    background: var(--bg-hover);
+    text-decoration: none;
+  }
+
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-green);
+  }
+
+  .nav-label {
+    color: var(--text-primary);
+  }
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 6px 20px 6px 46px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+  }
+
+  .nav-link:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+    text-decoration: none;
+  }
+
+  .nav-link.active {
+    color: var(--text-primary);
+    border-left-color: var(--accent-green);
+    background: var(--bg-tertiary);
+  }
+
+  /* For section items without icon indent */
+  .nav-section:has(.section-title) .nav-link {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  }
+</style>
