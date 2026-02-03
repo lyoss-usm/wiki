@@ -103,6 +103,77 @@
 }
 
 /* ------------------------------------------------------------
+   🌐 TEMA: LYOSS WEB (Paleta Web Oficial USM)
+   Paleta: Azul Institucional + Púrpura + Colores USM
+   Basado en la identidad visual de la web de Lyoss.
+   ------------------------------------------------------------ */
+[data-theme="lyoss-web"] {
+  /* Fondos - Azul profundo institucional */
+  --bg-primary: #08203e;          /* lyoss-dark: El azul noche de la web */
+  --bg-secondary: #0d2847;        /* Azul ligeramente más claro */
+  --bg-tertiary: #123254;         /* Para cards e inputs */
+  --bg-hover: #1a3d5c;            /* Hover states */
+  --bg-nav: #08203e;              /* Nav igual al fondo */
+  --border-color: #004b8540;      /* Primary al 25% para bordes */
+  
+  /* Textos */
+  --text-primary: #ffffff;        /* Blanco puro */
+  --text-secondary: #b8c5d6;      /* Gris azulado claro */
+  --text-muted: #6b7d94;          /* Gris azulado medio */
+  
+  /* Paleta de Acentos - Identidad Web USM */
+  --accent-primary: #004b85;      /* Azul institucional USM */
+  --accent-secondary: #8000ff;    /* Púrpura vibrante */
+  --accent-tertiary: #f7ae00;     /* Amarillo USM (warning) */
+  
+  /* Estados Semánticos - Colores USM */
+  --accent-success: #008452;      /* Verde USM */
+  --accent-warning: #f7ae00;      /* Amarillo USM */
+  --accent-error: #d60019;        /* Rojo USM */
+  --accent-info: #004b85;         /* Azul primary */
+  --accent-highlight: #8000ff;    /* Púrpura para highlights */
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #004b85 0%, #08203e 100%);
+  --gradient-accent: linear-gradient(135deg, #8000ff 0%, #004b85 100%);
+}
+
+/* ------------------------------------------------------------
+   🌐 TEMA: LYOSS WEB PANELS (Con Nav/Sidebar destacados)
+   Misma paleta web pero con navegación diferenciada
+   ------------------------------------------------------------ */
+[data-theme="lyoss-web-panels"] {
+  /* Fondos */
+  --bg-primary: #08203e;
+  --bg-secondary: #0d2847;
+  --bg-tertiary: #123254;
+  --bg-hover: #1a3d5c;
+  --bg-nav: #0d2847;              /* Nav con color secundario */
+  --border-color: #004b8540;
+  
+  /* Textos */
+  --text-primary: #ffffff;
+  --text-secondary: #b8c5d6;
+  --text-muted: #6b7d94;
+  
+  /* Paleta de Acentos */
+  --accent-primary: #004b85;
+  --accent-secondary: #8000ff;
+  --accent-tertiary: #f7ae00;
+  
+  /* Estados */
+  --accent-success: #008452;
+  --accent-warning: #f7ae00;
+  --accent-error: #d60019;
+  --accent-info: #004b85;
+  --accent-highlight: #8000ff;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #004b85 0%, #08203e 100%);
+  --gradient-accent: linear-gradient(135deg, #8000ff 0%, #004b85 100%);
+}
+
+/* ------------------------------------------------------------
    ⚡ TEMA 2: VOID NULL (Inspiración Vercel/Next.js)
    Paleta: Monocromática (Blanco/Negro) + Acento Azul Eléctrico
    Minimalismo puro. "Underground" sofisticado.
