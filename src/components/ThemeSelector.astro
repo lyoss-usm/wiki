@@ -208,6 +208,7 @@ const themes = [
     top: calc(100% + 8px);
     right: 0;
     width: 240px;
+    max-height: 70vh;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -218,6 +219,8 @@ const themes = [
     transition: all 0.2s ease;
     z-index: 1000;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .theme-dropdown.open {
@@ -238,6 +241,25 @@ const themes = [
 
   .theme-options {
     padding: 8px;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .theme-options::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .theme-options::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .theme-options::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+  }
+
+  .theme-options::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
   }
 
   .theme-option {
