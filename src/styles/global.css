@@ -272,7 +272,7 @@ code {
   background-color: var(--bg-tertiary);
   padding: 0.2em 0.5em;
   border-radius: 6px;
-  color: var(--accent-tertiary);
+  color: #c9d1d9;
 }
 
 pre code {
