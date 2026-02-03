@@ -1,17 +1,252 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
 
+/* ============================================================
+   🎨 SISTEMA DE TEMAS - DARK MODE AMIGABLE
+   ============================================================
+   Los temas se activan automáticamente con data-theme en <html>
+   Todos evitan negros puros (#000) para reducir fatiga visual.
+   Cada tema tiene una paleta cohesiva con personalidad propia.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   🌊 TEMA 1: OCEAN DEPTHS (Azul profundo - Por defecto)
+   Paleta: Azules oceánicos + Cyan brillante + Coral
+   Transmite calma, profesionalismo y confianza.
+   ------------------------------------------------------------ */
+/* ============================================================
+   ROOT & FUENTES
+   Definición global de tipografías y valores por defecto
+   ============================================================ */
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-tertiary: #1a1a1a;
-  --bg-hover: #1f1f1f;
-  --border-color: #2a2a2a;
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1a1;
-  --text-muted: #666666;
-  --accent-green: #3ecf8e;
-  --accent-blue: #3b82f6;
+  /* Stack de fuentes moderno y "Tech" */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; /* Clave para el código */
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  
+  /* Radios de borde para suavizar la interfaz (estilo Vercel/Supabase) */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 }
+
+/* ------------------------------------------------------------
+   🐧 TEMA 1: LYOSS CORE (Identidad Oficial)
+   Paleta: Ámbar (Pico/Corbata) + Azul Profundo + Rojo
+   Es la identidad del Pingüino USM. Seria pero con acentos fuertes.
+   ------------------------------------------------------------ */
+:root,
+[data-theme="lyoss-core"] {
+  /* Fondos - Escala de Grises Monolito */
+  --bg-primary: #121212;          /* El negro suave solicitado */
+  --bg-secondary: #18181b;        /* Zinc-900: Paneles / Cards */
+  --bg-tertiary: #27272a;         /* Zinc-800: Inputs / Elementos inactivos */
+  --bg-hover: #27272a;            /* Hover en items de lista */
+  --bg-nav: #121212;              /* Nav y Sidebar igual al fondo */
+  --border-color: #ffffff1a;      /* Blanco al 10% para bordes sutiles */
+  
+  /* Textos */
+  --text-primary: #f4f4f5;        /* Zinc-100: Casi blanco */
+  --text-secondary: #a1a1aa;      /* Zinc-400: Gris medio */
+  --text-muted: #52525b;          /* Zinc-600: Comentarios/Metadata */
+  
+  /* Paleta de Acentos - Identidad Tux USM */
+  --accent-primary: #fbbf24;      /* Amber-400: Botones principales, logos (El pico del pingüino) */
+  --accent-secondary: #38bdf8;    /* Sky-400: Enlaces, estados de foco */
+  --accent-tertiary: #f43f5e;     /* Rose-500: Detalles, la corbata roja */
+  
+  /* Estados Semánticos */
+  --accent-success: #10b981;      /* Emerald-500 */
+  --accent-warning: #f59e0b;      /* Amber-500 */
+  --accent-error: #ef4444;        /* Red-500 */
+  --accent-info: #0ea5e9;         /* Sky-500 */
+  --accent-highlight: #fbbf24;    /* Ámbar para resaltar texto */
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #fbbf24 0%, #d97706 100%); /* Ámbar a Naranja */
+  --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #fbbf24 100%);  /* Cielo a Ámbar */
+}
+
+/* ------------------------------------------------------------
+   🐧 TEMA 1B: LYOSS CORE PANELS (Con Nav/Sidebar destacados)
+   Misma paleta pero con navegación diferenciada
+   ------------------------------------------------------------ */
+[data-theme="lyoss-core-panels"] {
+  /* Fondos */
+  --bg-primary: #121212;
+  --bg-secondary: #18181b;
+  --bg-tertiary: #27272a;
+  --bg-hover: #27272a;
+  --bg-nav: #18181b;              /* Nav y Sidebar con color secundario */
+  --border-color: #ffffff1a;
+  
+  /* Textos */
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
+  
+  /* Paleta de Acentos */
+  --accent-primary: #fbbf24;
+  --accent-secondary: #38bdf8;
+  --accent-tertiary: #f43f5e;
+  
+  /* Estados */
+  --accent-success: #10b981;
+  --accent-warning: #f59e0b;
+  --accent-error: #ef4444;
+  --accent-info: #0ea5e9;
+  --accent-highlight: #fbbf24;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #fbbf24 100%);
+}
+
+/* ------------------------------------------------------------
+   ⚡ TEMA 2: VOID NULL (Inspiración Vercel/Next.js)
+   Paleta: Monocromática (Blanco/Negro) + Acento Azul Eléctrico
+   Minimalismo puro. "Underground" sofisticado.
+   ------------------------------------------------------------ */
+[data-theme="void-null"] {
+  /* Fondos - Negro Absoluto y Grises Planos */
+  --bg-primary: #121212;
+  --bg-secondary: #1c1c1c;        
+  --bg-tertiary: #262626;
+  --bg-hover: #2a2a2a;
+  --bg-nav: #121212;              /* Nav y Sidebar igual al fondo */
+  --border-color: #333333;        /* Bordes grises muy marcados */
+  
+  /* Textos */
+  --text-primary: #ffffff;        /* Blanco puro */
+  --text-secondary: #888888;      /* Gris medio estricto */
+  --text-muted: #444444;
+  
+  /* Paleta de Acentos - High Contrast */
+  --accent-primary: #ffffff;      /* El botón primario es blanco con texto negro */
+  --accent-secondary: #3291ff;    /* Azul eléctrico (Vercel blue) solo para focos */
+  --accent-tertiary: #ededed;     /* Gris muy claro */
+  
+  /* Estados */
+  --accent-success: #0070f3;      /* Azul Next.js */
+  --accent-warning: #f5a623;
+  --accent-error: #ff0000;        /* Rojo puro */
+  --accent-info: #0070f3;
+  --accent-highlight: #333333;
+  
+  /* Gradientes (Sutiles en escala de grises) */
+  --gradient-primary: linear-gradient(180deg, #ffffff 0%, #e5e5e5 100%);
+  --gradient-accent: linear-gradient(90deg, #0070f3 0%, #00c6ff 100%);
+}
+
+/* ------------------------------------------------------------
+   ⚡ TEMA 2B: VOID NULL PANELS (Con Nav/Sidebar destacados)
+   Misma paleta pero con navegación diferenciada
+   ------------------------------------------------------------ */
+[data-theme="void-null-panels"] {
+  /* Fondos */
+  --bg-primary: #121212;
+  --bg-secondary: #1c1c1c;        
+  --bg-tertiary: #262626;
+  --bg-hover: #2a2a2a;
+  --bg-nav: #1c1c1c;              /* Nav y Sidebar con color secundario */
+  --border-color: #333333;
+  
+  /* Textos */
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --text-muted: #444444;
+  
+  /* Paleta de Acentos */
+  --accent-primary: #ffffff;
+  --accent-secondary: #3291ff;
+  --accent-tertiary: #ededed;
+  
+  /* Estados */
+  --accent-success: #0070f3;
+  --accent-warning: #f5a623;
+  --accent-error: #ff0000;
+  --accent-info: #0070f3;
+  --accent-highlight: #333333;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(180deg, #ffffff 0%, #e5e5e5 100%);
+  --gradient-accent: linear-gradient(90deg, #0070f3 0%, #00c6ff 100%);
+}
+
+/* ------------------------------------------------------------
+   🔮 TEMA 3: DISTRO HOP (Cyberpunk / Dracula Vibe)
+   Paleta: Violeta + Rosa + Cyan
+   Para cuando la comunidad quiere sentirse "Hacker/Gamer".
+   ------------------------------------------------------------ */
+[data-theme="distro-hop"] {
+  /* Fondos - Azul noche muy oscuro */
+  --bg-primary: #121217;          /* Tinte violeta casi imperceptible */
+  --bg-secondary: #1a1a24;
+  --bg-tertiary: #252533;
+  --bg-hover: #2a2a3b;
+  --bg-nav: #121217;              /* Nav y Sidebar igual al fondo */
+  --border-color: #38384d;
+  
+  /* Textos */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Paleta de Acentos - Neon */
+  --accent-primary: #c084fc;      /* Purple-400: Principal */
+  --accent-secondary: #e879f9;    /* Fuchsia-400: Secundario */
+  --accent-tertiary: #22d3ee;     /* Cyan-400: Detalles */
+  
+  /* Estados */
+  --accent-success: #4ade80;
+  --accent-warning: #facc15;
+  --accent-error: #ff77e9;        /* Error rosa neón */
+  --accent-info: #818cf8;
+  --accent-highlight: #4c1d95;    /* Violeta oscuro */
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #c084fc 0%, #e879f9 100%);
+  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #c084fc 100%);
+}
+
+/* ------------------------------------------------------------
+   🔮 TEMA 3B: DISTRO HOP PANELS (Con Nav/Sidebar destacados)
+   Misma paleta pero con navegación diferenciada
+   ------------------------------------------------------------ */
+[data-theme="distro-hop-panels"] {
+  /* Fondos */
+  --bg-primary: #121217;
+  --bg-secondary: #1a1a24;
+  --bg-tertiary: #252533;
+  --bg-hover: #2a2a3b;
+  --bg-nav: #1a1a24;              /* Nav y Sidebar con color secundario */
+  --border-color: #38384d;
+  
+  /* Textos */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Paleta de Acentos */
+  --accent-primary: #c084fc;
+  --accent-secondary: #e879f9;
+  --accent-tertiary: #22d3ee;
+  
+  /* Estados */
+  --accent-success: #4ade80;
+  --accent-warning: #facc15;
+  --accent-error: #ff77e9;
+  --accent-info: #818cf8;
+  --accent-highlight: #4c1d95;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #c084fc 0%, #e879f9 100%);
+  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #c084fc 100%);
+}
+
+/* ============================================================
+   📝 ESTILOS BASE
+   ============================================================ */
 
 * {
   box-sizing: border-box;
@@ -22,22 +257,76 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: var(--font-sans);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings con fuente específica para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+/* Código y elementos técnicos */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+code {
+  background-color: var(--bg-tertiary);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
 }
 
 a {
-  color: var(--accent-green);
+  color: var(--accent-primary);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
+  color: var(--accent-secondary);
   text-decoration: underline;
 }
 
-/* Scrollbar styling */
+/* Párrafos legibles */
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Listas amigables */
+ul, ol {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Scrollbar styling - con color de acento */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -50,8 +339,155 @@ a:hover {
 ::-webkit-scrollbar-thumb {
   background: var(--border-color);
   border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
+  background: var(--accent-primary);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+/* Focus states accesibles */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   🎨 UTILIDADES DE COLOR DE ACENTO
+   ============================================================ */
+
+/* Badges/Tags */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background: color-mix(in srgb, var(--accent-primary) 20%, transparent);
+  color: var(--accent-primary);
+  border: 1px solid color-mix(in srgb, var(--accent-primary) 30%, transparent);
+}
+
+.badge-success {
+  background: color-mix(in srgb, var(--accent-success) 20%, transparent);
+  color: var(--accent-success);
+  border: 1px solid color-mix(in srgb, var(--accent-success) 30%, transparent);
+}
+
+.badge-warning {
+  background: color-mix(in srgb, var(--accent-warning) 20%, transparent);
+  color: var(--accent-warning);
+  border: 1px solid color-mix(in srgb, var(--accent-warning) 30%, transparent);
+}
+
+.badge-error {
+  background: color-mix(in srgb, var(--accent-error) 20%, transparent);
+  color: var(--accent-error);
+  border: 1px solid color-mix(in srgb, var(--accent-error) 30%, transparent);
+}
+
+/* Botones con gradiente */
+.btn-gradient {
+  background: var(--gradient-primary);
+  color: var(--bg-primary);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Cajas de información */
+.callout {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+  margin: 1rem 0;
+}
+
+.callout-info {
+  background: color-mix(in srgb, var(--accent-info) 10%, var(--bg-secondary));
+  border-color: var(--accent-info);
+}
+
+.callout-success {
+  background: color-mix(in srgb, var(--accent-success) 10%, var(--bg-secondary));
+  border-color: var(--accent-success);
+}
+
+.callout-warning {
+  background: color-mix(in srgb, var(--accent-warning) 10%, var(--bg-secondary));
+  border-color: var(--accent-warning);
+}
+
+.callout-error {
+  background: color-mix(in srgb, var(--accent-error) 10%, var(--bg-secondary));
+  border-color: var(--accent-error);
+}
+
+/* Highlight de código inline */
+code {
+  color: var(--accent-tertiary);
+}
+
+/* Links con subrayado animado */
+a {
+  position: relative;
+}
+
+a:not(.no-underline)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+a:not(.no-underline):hover::after {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Bordes con acento */
+.border-accent {
+  border-color: var(--accent-primary);
+}
+
+/* Texto con gradiente */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect para elementos destacados */
+.glow {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent-primary) 30%, transparent);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 25px color-mix(in srgb, var(--accent-primary) 40%, transparent);
 }

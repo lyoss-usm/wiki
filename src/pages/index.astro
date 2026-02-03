@@ -2,142 +2,1009 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Guía de Linux">
-  <article class="docs-content">
-    <h1>Comandos Básicos de Linux</h1>
+<MainLayout title="Showcase de Componentes">
+  <div class="content-wrapper">
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="badge badge-primary">v1.0.0</span>
+      <h1 class="text-gradient">Bienvenido a Lyoss Wiki</h1>
+      <p class="hero-subtitle">
+        Tu guía definitiva para dominar Linux. Desde comandos básicos hasta
+        administración avanzada de sistemas.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-gradient">Comenzar ahora</button>
+        <a href="#" class="btn-outline no-underline">Ver en GitHub</a>
+      </div>
+    </section>
 
-    <p class="intro">
-      Linux es un sistema operativo de código abierto que se ha convertido en la
-      base de servidores, supercomputadoras y dispositivos en todo el mundo.
-      Dominar la <a href="#">línea de comandos</a> es esencial para cualquier administrador
-      de sistemas o desarrollador.
-    </p>
+    <!-- Badges Section -->
+    <section class="section">
+      <h2>🏷️ Badges & Estados</h2>
+      <p>Diferentes estados y etiquetas para categorizar contenido.</p>
 
-    <p>
-      Esta guía te enseñará los comandos fundamentales para navegar, gestionar
-      archivos y administrar tu sistema Linux de manera eficiente.
-    </p>
+      <div class="badges-grid">
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-success">Success</span>
+        <span class="badge badge-warning">Warning</span>
+        <span class="badge badge-error">Error</span>
+        <span class="badge badge-info">Info</span>
+        <span class="badge badge-new">Nuevo</span>
+        <span class="badge badge-deprecated">Deprecated</span>
+        <span class="badge badge-experimental">Experimental</span>
+      </div>
+    </section>
 
-    <h2>Navegación del sistema</h2>
+    <!-- Callouts Section -->
+    <section class="section">
+      <h2>📢 Callouts & Alertas</h2>
+      <p>Cajas informativas para destacar contenido importante.</p>
 
-    <p>
-      Los comandos de navegación te permiten moverte por el sistema de archivos:
-    </p>
+      <div class="callout callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-content">
+          <strong>Tip:</strong> Usa <code>Tab</code> para autocompletar comandos en
+          la terminal. Esto te ahorrará mucho tiempo.
+        </div>
+      </div>
 
-    <ul>
-      <li>
-        <code>pwd</code> - Muestra el directorio de trabajo actual (Print Working
-        Directory).
-      </li>
-      <li>
-        <code>ls</code> - Lista el contenido de un directorio. Usa <code
-          >ls -la</code
-        > para ver archivos ocultos y permisos.
-      </li>
-      <li>
-        <code>cd</code> - Cambia de directorio. Usa <code>cd ..</code> para subir
-        un nivel o <code>cd ~</code> para ir al home.
-      </li>
-    </ul>
+      <div class="callout callout-success">
+        <div class="callout-icon">✅</div>
+        <div class="callout-content">
+          <strong>Éxito:</strong> El paquete se ha instalado correctamente. Puedes
+          verificarlo con <code>which nombre-paquete</code>.
+        </div>
+      </div>
 
-    <h2>Gestión de archivos</h2>
+      <div class="callout callout-warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-content">
+          <strong>Advertencia:</strong> Este comando requiere permisos de superusuario.
+          Asegúrate de saber lo que estás haciendo antes de usar <code
+            >sudo</code
+          >.
+        </div>
+      </div>
 
-    <ol>
-      <li>
-        <code>touch archivo.txt</code> - Crea un archivo vacío o actualiza la fecha
-        de modificación.
-      </li>
-      <li>
-        <code>mkdir directorio</code> - Crea un nuevo directorio. Usa <code
-          >-p</code
-        > para crear directorios anidados.
-      </li>
-      <li>
-        <code>cp origen destino</code> - Copia archivos o directorios (usa <code
-          >-r</code
-        > para directorios).
-      </li>
-      <li>
-        <code>mv origen destino</code> - Mueve o renombra archivos y directorios.
-      </li>
-      <li>
-        <code>rm archivo</code> - Elimina archivos. Usa <code>rm -rf</code> con precaución
-        para directorios.
-      </li>
-    </ol>
-  </article>
+      <div class="callout callout-error">
+        <div class="callout-icon">🚫</div>
+        <div class="callout-content">
+          <strong>Peligro:</strong> Nunca ejecutes <code>rm -rf /</code> o comandos
+          similares. Esto eliminará todo tu sistema de archivos.
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Blocks Section -->
+    <section class="section">
+      <h2>💻 Bloques de Código</h2>
+      <p>Ejemplos de código con syntax highlighting.</p>
+
+      <h3>Bash / Terminal</h3>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-lang">bash</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><code class="language-bash"><span class="comment"># Actualizar el sistema en Debian/Ubuntu</span>
+<span class="keyword">sudo</span> apt update && <span class="keyword">sudo</span> apt upgrade -y
+
+<span class="comment"># Listar archivos con detalles</span>
+<span class="keyword">ls</span> -la <span class="string">/home/usuario</span>
+
+<span class="comment"># Buscar un archivo</span>
+<span class="keyword">find</span> / -name <span class="string">"*.conf"</span> <span class="number">2</span>>/dev/null
+
+<span class="comment"># Ver procesos activos</span>
+<span class="keyword">ps</span> aux | <span class="keyword">grep</span> <span class="string">"nginx"</span></code></pre>
+      </div>
+
+      <h3>Python</h3>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-lang">python</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><code class="language-python"><span class="keyword">import</span> os
+<span class="keyword">import</span> subprocess
+
+<span class="keyword">def</span> <span class="function">get_system_info</span>():</code>
+<code class="language-python">    <span class="string">"""Obtiene información del sistema Linux"""</span></code>
+<code class="language-python">    info = dict(</code>
+<code class="language-python">        hostname=os.uname().nodename,</code>
+<code class="language-python">        kernel=os.uname().release,</code>
+<code class="language-python">        arch=os.uname().machine,</code>
+<code class="language-python">    )</code>
+<code class="language-python">    <span class="keyword">return</span> info</code>
+
+<code class="language-python"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</code>
+<code class="language-python">    data = get_system_info()</code>
+<code class="language-python">    <span class="keyword">print</span>(<span class="string">"Sistema:"</span>, data)</code></pre>
+      </div>
+
+      <h3>Configuración (YAML)</h3>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-lang">yaml</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><code class="language-yaml"><span class="comment"># docker-compose.yml</span>
+<span class="key">version</span>: <span class="string">"3.8"</span>
+
+<span class="key">services</span>:
+  <span class="key">web</span>:
+    <span class="key">image</span>: <span class="string">nginx:alpine</span>
+    <span class="key">ports</span>:
+      - <span class="string">"80:80"</span>
+    <span class="key">volumes</span>:
+      - <span class="string">./html:/usr/share/nginx/html</span>
+    <span class="key">restart</span>: <span class="string">unless-stopped</span></code></pre>
+      </div>
+    </section>
+
+    <!-- Inline Code Section -->
+    <section class="section">
+      <h2>📝 Código Inline</h2>
+      <p>
+        Usa el comando <code>cd /ruta/directorio</code> para navegar entre directorios.
+        El archivo de configuración está en <code>/etc/nginx/nginx.conf</code>.
+        Variables de entorno como <code>$HOME</code> y <code>$PATH</code> son fundamentales.
+      </p>
+
+      <p>
+        En Python, importa módulos con <code>import os</code> y ejecuta comandos con
+        <code>subprocess.run(["ls", "-la"])</code>. Para JavaScript usa <code
+          >console.log()</code
+        >.
+      </p>
+    </section>
+
+    <!-- Tables Section -->
+    <section class="section">
+      <h2>📊 Tablas</h2>
+      <p>Comparativas y referencias rápidas.</p>
+
+      <h3>Comandos de Navegación</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Comando</th>
+              <th>Descripción</th>
+              <th>Ejemplo</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>cd</code></td>
+              <td>Cambiar de directorio</td>
+              <td><code>cd /home/user</code></td>
+              <td><span class="badge badge-success">Básico</span></td>
+            </tr>
+            <tr>
+              <td><code>ls</code></td>
+              <td>Listar contenido</td>
+              <td><code>ls -la</code></td>
+              <td><span class="badge badge-success">Básico</span></td>
+            </tr>
+            <tr>
+              <td><code>pwd</code></td>
+              <td>Mostrar ruta actual</td>
+              <td><code>pwd</code></td>
+              <td><span class="badge badge-success">Básico</span></td>
+            </tr>
+            <tr>
+              <td><code>find</code></td>
+              <td>Buscar archivos</td>
+              <td><code>find / -name "*.log"</code></td>
+              <td><span class="badge badge-warning">Intermedio</span></td>
+            </tr>
+            <tr>
+              <td><code>locate</code></td>
+              <td>Búsqueda rápida indexada</td>
+              <td><code>locate nginx.conf</code></td>
+              <td><span class="badge badge-warning">Intermedio</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Comparativa de Gestores de Paquetes</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Distro</th>
+              <th>Gestor</th>
+              <th>Instalar</th>
+              <th>Actualizar</th>
+              <th>Buscar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="distro-badge debian">Debian/Ubuntu</span></td>
+              <td><code>apt</code></td>
+              <td><code>apt install pkg</code></td>
+              <td><code>apt upgrade</code></td>
+              <td><code>apt search pkg</code></td>
+            </tr>
+            <tr>
+              <td><span class="distro-badge arch">Arch Linux</span></td>
+              <td><code>pacman</code></td>
+              <td><code>pacman -S pkg</code></td>
+              <td><code>pacman -Syu</code></td>
+              <td><code>pacman -Ss pkg</code></td>
+            </tr>
+            <tr>
+              <td><span class="distro-badge fedora">Fedora/RHEL</span></td>
+              <td><code>dnf</code></td>
+              <td><code>dnf install pkg</code></td>
+              <td><code>dnf upgrade</code></td>
+              <td><code>dnf search pkg</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Diagrams Section -->
+    <section class="section">
+      <h2>📐 Diagramas ASCII</h2>
+      <p>Representaciones visuales de estructuras y flujos.</p>
+
+      <h3>Estructura de Directorios Linux</h3>
+      <div class="diagram">
+        <pre>/  (raíz)
+├── bin/          → Binarios esenciales del sistema
+├── boot/         → Archivos de arranque y kernel
+├── dev/          → Dispositivos del sistema
+├── etc/          → Configuraciones del sistema
+│   ├── nginx/
+│   ├── ssh/
+│   └── systemd/
+├── home/         → Directorios de usuarios
+│   └── usuario/
+│       ├── .config/
+│       ├── .local/
+│       └── Documents/
+├── lib/          → Librerías compartidas
+├── opt/          → Software opcional
+├── proc/         → Información de procesos (virtual)
+├── root/         → Home del superusuario
+├── tmp/          → Archivos temporales
+├── usr/          → Programas de usuario
+│   ├── bin/
+│   ├── lib/
+│   └── share/
+└── var/          → Datos variables
+    ├── log/
+    ├── cache/
+    └── www/</pre>
+      </div>
+
+      <h3>Flujo de Permisos</h3>
+      <div class="diagram">
+        <pre>┌─────────────────────────────────────────────────────────┐
+│                    PERMISOS DE ARCHIVO                   │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   -rwxr-xr--  1  user  group  4096  Jan 1  file.txt    │
+│   │└┬┘└┬┘└┬┘                                            │
+│   │ │  │  └── Otros: r-- (4) → Solo lectura            │
+│   │ │  └───── Grupo: r-x (5) → Leer + Ejecutar         │
+│   │ └──────── Usuario: rwx (7) → Todo                  │
+│   └────────── Tipo: - archivo, d directorio            │
+│                                                         │
+├─────────────────────────────────────────────────────────┤
+│  Cálculo: r=4, w=2, x=1  →  chmod 754 file.txt         │
+└─────────────────────────────────────────────────────────┘</pre>
+      </div>
+
+      <h3>Arquitectura de Red</h3>
+      <div class="diagram">
+        <pre>                    ┌─────────────┐
+                    │   INTERNET  │
+                    └──────┬──────┘
+                           │
+                    ┌──────▼──────┐
+                    │   ROUTER    │
+                    │  192.168.1.1│
+                    └──────┬──────┘
+                           │
+         ┌─────────────────┼─────────────────┐
+         │                 │                 │
+  ┌──────▼──────┐   ┌──────▼──────┐   ┌──────▼──────┐
+  │   SERVER    │   │   DESKTOP   │   │   LAPTOP    │
+  │ 192.168.1.10│   │ 192.168.1.20│   │ 192.168.1.30│
+  │  ┌───────┐  │   └─────────────┘   └─────────────┘
+  │  │ nginx │  │
+  │  │ :80   │  │
+  │  └───────┘  │
+  └─────────────┘</pre>
+      </div>
+    </section>
+
+    <!-- Links Section -->
+    <section class="section">
+      <h2>🔗 Enlaces</h2>
+      <p>Diferentes estilos de enlaces y navegación.</p>
+
+      <div class="links-demo">
+        <p>
+          Visita la <a href="#">documentación oficial</a> para más información. También
+          puedes ver el <a href="#">código fuente</a> o unirte a la
+          <a href="#">comunidad de Discord</a>.
+        </p>
+
+        <div class="link-cards">
+          <a href="#" class="link-card no-underline">
+            <div class="link-card-icon">📚</div>
+            <div class="link-card-content">
+              <h4>Documentación</h4>
+              <p>Guías completas y tutoriales</p>
+            </div>
+            <span class="link-arrow">→</span>
+          </a>
+
+          <a href="#" class="link-card no-underline">
+            <div class="link-card-icon">🐙</div>
+            <div class="link-card-content">
+              <h4>GitHub</h4>
+              <p>Código fuente y contribuciones</p>
+            </div>
+            <span class="link-arrow">→</span>
+          </a>
+
+          <a href="#" class="link-card no-underline">
+            <div class="link-card-icon">💬</div>
+            <div class="link-card-content">
+              <h4>Discord</h4>
+              <p>Comunidad y soporte</p>
+            </div>
+            <span class="link-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keyboard Shortcuts -->
+    <section class="section">
+      <h2>⌨️ Atajos de Teclado</h2>
+      <p>Combinaciones de teclas útiles en la terminal.</p>
+
+      <div class="shortcuts-grid">
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>Ctrl</kbd> + <kbd>C</kbd>
+          </div>
+          <span>Cancelar comando actual</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>Ctrl</kbd> + <kbd>Z</kbd>
+          </div>
+          <span>Suspender proceso</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>Ctrl</kbd> + <kbd>D</kbd>
+          </div>
+          <span>Cerrar terminal / EOF</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>Ctrl</kbd> + <kbd>L</kbd>
+          </div>
+          <span>Limpiar pantalla</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>Ctrl</kbd> + <kbd>R</kbd>
+          </div>
+          <span>Buscar en historial</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>Tab</kbd>
+          </div>
+          <span>Autocompletar</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>↑</kbd> / <kbd>↓</kbd>
+          </div>
+          <span>Navegar historial</span>
+        </div>
+
+        <div class="shortcut">
+          <div class="keys">
+            <kbd>Ctrl</kbd> + <kbd>A</kbd>
+          </div>
+          <span>Ir al inicio de línea</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Cards -->
+    <section class="section">
+      <h2>📈 Tarjetas de Estadísticas</h2>
+      <p>Métricas y datos importantes.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card glow-hover">
+          <div class="stat-icon">🐧</div>
+          <div class="stat-value text-gradient">500+</div>
+          <div class="stat-label">Comandos documentados</div>
+        </div>
+
+        <div class="stat-card glow-hover">
+          <div class="stat-icon">📖</div>
+          <div class="stat-value text-gradient">50+</div>
+          <div class="stat-label">Guías y tutoriales</div>
+        </div>
+
+        <div class="stat-card glow-hover">
+          <div class="stat-icon">🎨</div>
+          <div class="stat-value text-gradient">5</div>
+          <div class="stat-label">Temas disponibles</div>
+        </div>
+
+        <div class="stat-card glow-hover">
+          <div class="stat-icon">👥</div>
+          <div class="stat-value text-gradient">1.2k</div>
+          <div class="stat-label">Contribuidores</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress & Steps -->
+    <section class="section">
+      <h2>📍 Progreso & Pasos</h2>
+      <p>Indicadores de progreso y guías paso a paso.</p>
+
+      <div class="steps">
+        <div class="step completed">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Instalación</h4>
+            <p>Descarga e instala tu distribución favorita</p>
+          </div>
+        </div>
+
+        <div class="step active">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Configuración</h4>
+            <p>Configura tu entorno de desarrollo</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Primeros comandos</h4>
+            <p>Aprende los comandos básicos de terminal</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>¡Listo!</h4>
+            <p>Ya eres un usuario de Linux</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </MainLayout>
 
 <style>
-  .docs-content {
-    max-width: 100%;
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
   }
 
-  .docs-content h1 {
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 3rem 0 4rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    transition: all 0.2s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent-primary);
+    background: var(--bg-hover);
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 4rem;
+  }
+
+  .section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-primary);
+    display: inline-block;
+  }
+
+  .section h3 {
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem;
+    color: var(--text-secondary);
+  }
+
+  /* Badges */
+  .badges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .badge-info {
+    background: color-mix(in srgb, var(--accent-info) 20%, transparent);
+    color: var(--accent-info);
+    border: 1px solid color-mix(in srgb, var(--accent-info) 30%, transparent);
+  }
+
+  .badge-new {
+    background: color-mix(in srgb, var(--accent-tertiary) 20%, transparent);
+    color: var(--accent-tertiary);
+    border: 1px solid
+      color-mix(in srgb, var(--accent-tertiary) 30%, transparent);
+  }
+
+  .badge-deprecated {
+    background: color-mix(in srgb, var(--text-muted) 20%, transparent);
+    color: var(--text-muted);
+    border: 1px solid color-mix(in srgb, var(--text-muted) 30%, transparent);
+    text-decoration: line-through;
+  }
+
+  .badge-experimental {
+    background: color-mix(in srgb, var(--accent-secondary) 20%, transparent);
+    color: var(--accent-secondary);
+    border: 1px solid
+      color-mix(in srgb, var(--accent-secondary) 30%, transparent);
+  }
+
+  /* Callouts mejorados */
+  .callout {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+
+  .callout-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .callout-content {
+    flex: 1;
+  }
+
+  /* Code Blocks */
+  .code-block {
+    margin: 1rem 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .code-lang {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+  }
+
+  .code-copy {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-hover);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .code-copy:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    border-color: var(--accent-primary);
+  }
+
+  .code-block pre {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    border: none;
+    background: var(--bg-secondary);
+  }
+
+  .code-block code {
+    background: none;
+    padding: 0;
+    color: var(--text-primary);
+  }
+
+  /* Syntax Highlighting */
+  .code-block .comment {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .code-block .keyword {
+    color: var(--accent-primary);
+    font-weight: 500;
+  }
+  .code-block .string {
+    color: var(--accent-success);
+  }
+  .code-block .number {
+    color: var(--accent-warning);
+  }
+  .code-block .function {
+    color: var(--accent-secondary);
+  }
+  .code-block .variable {
+    color: var(--accent-tertiary);
+  }
+  .code-block .key {
+    color: var(--accent-primary);
+  }
+
+  /* Tables */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  th {
+    background: var(--bg-tertiary);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  tr:hover {
+    background: var(--bg-hover);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .distro-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .distro-badge.debian {
+    background: #a80030;
+    color: white;
+  }
+  .distro-badge.arch {
+    background: #1793d1;
+    color: white;
+  }
+  .distro-badge.fedora {
+    background: #294172;
+    color: white;
+  }
+
+  /* Diagrams */
+  .diagram {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow-x: auto;
+  }
+
+  .diagram pre {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--accent-tertiary);
+  }
+
+  /* Link Cards */
+  .link-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    transition: all 0.2s;
+    color: var(--text-primary);
+  }
+
+  .link-card:hover {
+    border-color: var(--accent-primary);
+    background: var(--bg-hover);
+    transform: translateY(-2px);
+  }
+
+  .link-card-icon {
+    font-size: 1.5rem;
+  }
+
+  .link-card-content h4 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .link-card-content p {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .link-arrow {
+    margin-left: auto;
+    color: var(--accent-primary);
+    font-size: 1.25rem;
+    transition: transform 0.2s;
+  }
+
+  .link-card:hover .link-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Keyboard */
+  kbd {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 0 var(--border-color);
+    color: var(--text-primary);
+  }
+
+  .shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .shortcut {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+  }
+
+  .shortcut .keys {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+  }
+
+  .shortcut span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s;
+  }
+
+  .stat-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
     font-size: 2.5rem;
     font-weight: 700;
-    margin: 0 0 24px 0;
-    color: var(--text-primary);
-    line-height: 1.2;
+    font-family: var(--font-heading);
   }
 
-  .docs-content h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 40px 0 16px 0;
-    color: var(--text-primary);
-    line-height: 1.3;
-  }
-
-  .docs-content p {
-    margin: 0 0 16px 0;
+  .stat-label {
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    font-size: 15px;
-    line-height: 1.7;
+    margin-top: 0.25rem;
   }
 
-  .docs-content .intro {
-    font-size: 16px;
-    color: var(--text-secondary);
+  /* Steps */
+  .steps {
+    margin-top: 1.5rem;
   }
 
-  .docs-content a {
-    color: var(--accent-green);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+  .step {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    margin-left: 1rem;
   }
 
-  .docs-content a:hover {
-    color: #4ade80;
+  .step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    top: 3.5rem;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
   }
 
-  .docs-content ul,
-  .docs-content ol {
-    margin: 0 0 16px 0;
-    padding-left: 24px;
-    color: var(--text-secondary);
+  .step.completed:not(:last-child)::before {
+    background: var(--accent-success);
   }
 
-  .docs-content li {
-    margin-bottom: 8px;
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .docs-content ul li::marker {
-    color: var(--text-muted);
-  }
-
-  .docs-content ol li::marker {
-    color: var(--text-muted);
-  }
-
-  .docs-content code {
+  .step-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
     background: var(--bg-tertiary);
-    color: var(--accent-green);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: "JetBrains Mono", "Fira Code", monospace;
-    font-size: 13px;
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+
+  .step.completed .step-number {
+    background: var(--accent-success);
+    border-color: var(--accent-success);
+    color: var(--bg-primary);
+  }
+
+  .step.active .step-number {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--bg-primary);
+    box-shadow: 0 0 0 4px
+      color-mix(in srgb, var(--accent-primary) 30%, transparent);
+  }
+
+  .step-content h4 {
+    margin: 0 0 0.25rem;
+  }
+
+  .step-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .step.completed .step-content h4,
+  .step.active .step-content h4 {
+    color: var(--text-primary);
+  }
+
+  .step:not(.completed):not(.active) .step-content h4 {
+    color: var(--text-muted);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      padding: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
