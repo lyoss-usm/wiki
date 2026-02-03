@@ -369,21 +369,21 @@
   --text-secondary: #9fa6b2;
   --text-muted: #6a7080;
   
-  /* Paleta de Acentos */
-  --accent-primary: #6b8dd6;
-  --accent-secondary: #b77fdb;
-  --accent-tertiary: #5dd4ed;
+  /* Paleta de Acentos (Más neón) */
+  --accent-primary: #7ea3f0;
+  --accent-secondary: #cd8ff0;
+  --accent-tertiary: #6eeaff;
   
-  /* Estados */
-  --accent-success: #7ed69d;
-  --accent-warning: #e8c574;
-  --accent-error: #d98296;
-  --accent-info: #78c4d8;
-  --accent-highlight: #9b7dc4;
+  /* Estados (Más brillantes) */
+  --accent-success: #8cf0b5;
+  --accent-warning: #ffd685;
+  --accent-error: #f08da2;
+  --accent-info: #8ad8f0;
+  --accent-highlight: #b08de0;
   
   /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, #6b8dd6 0%, #b77fdb 100%);
-  --gradient-accent: linear-gradient(135deg, #5dd4ed 0%, #6b8dd6 100%);
+  --gradient-primary: linear-gradient(135deg, #7ea3f0 0%, #cd8ff0 100%);
+  --gradient-accent: linear-gradient(135deg, #6eeaff 0%, #7ea3f0 100%);
 }
 
 /* ============================================================
