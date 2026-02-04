@@ -189,6 +189,219 @@
 }
 
 /* ============================================================
+   🎨 TEMAS ROJO & AMARILLO INSTITUCIONALES
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   ❤️ TEMA: PASSION RED
+   Rojo institucional con amarillo dorado
+   ------------------------------------------------------------ */
+[data-theme="passion-red"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --bg-card: #1c2128;
+  --border-color: #3d4451;
+  --border-subtle: #2d333c;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Rojo como principal */
+  --accent-primary: #e63946;
+  --accent-secondary: #f7ae00;
+  --accent-tertiary: #ff6b6b;
+  
+  --accent-success: #4ecb71;
+  --accent-warning: #f7ae00;
+  --accent-error: #d60019;
+  --accent-info: #ff8fa3;
+  --accent-highlight: #ffb347;
+  
+  /* Efectos */
+  --glow-primary: rgba(230, 57, 70, 0.15);
+  --glow-secondary: rgba(247, 174, 0, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  --gradient-primary: linear-gradient(135deg, #e63946 0%, #f7ae00 100%);
+  --gradient-accent: linear-gradient(135deg, #ff6b6b 0%, #e63946 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+/* ------------------------------------------------------------
+   ☀️ TEMA: GOLDEN SUNRISE
+   Amarillo dorado con toques de rojo - Amarillo en sidebar izq, rojo en derecha
+   ------------------------------------------------------------ */
+[data-theme="golden-sunrise"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #1f242b;
+  --bg-card: #1c2128;
+  --border-color: #3d4451;
+  --border-subtle: #2d333c;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Amarillo como principal */
+  --accent-primary: #f7ae00;
+  --accent-secondary: #e63946;
+  --accent-tertiary: #ffc947;
+  
+  --accent-success: #4ecb71;
+  --accent-warning: #ffb347;
+  --accent-error: #d60019;
+  --accent-info: #ffd166;
+  --accent-highlight: #ff6b6b;
+  
+  /* Efectos */
+  --glow-primary: rgba(247, 174, 0, 0.15);
+  --glow-secondary: rgba(230, 57, 70, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  --gradient-primary: linear-gradient(135deg, #f7ae00 0%, #e63946 100%);
+  --gradient-accent: linear-gradient(135deg, #ffc947 0%, #f7ae00 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+/* ============================================================
+   🌊 TEMAS VIVID/ELECTRIC SIN MORADO
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   🌊 TEMA: OCEAN VIVID
+   Azul + Cyan (sin morado)
+   ------------------------------------------------------------ */
+[data-theme="ocean-vivid"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --bg-card: #1c2128;
+  --border-color: #3d4451;
+  --border-subtle: #2d333c;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Azul y Cyan sin morado */
+  --accent-primary: #4da6ff;
+  --accent-secondary: #00d4e6;
+  --accent-tertiary: #00b8d4;
+  
+  --accent-success: #22d97a;
+  --accent-warning: #ffb020;
+  --accent-error: #ff4d6d;
+  --accent-info: #00c8ff;
+  --accent-highlight: #66ccff;
+  
+  /* Efectos */
+  --glow-primary: rgba(77, 166, 255, 0.15);
+  --glow-secondary: rgba(0, 212, 230, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  --gradient-primary: linear-gradient(135deg, #4da6ff 0%, #00d4e6 100%);
+  --gradient-accent: linear-gradient(135deg, #00b8d4 0%, #4da6ff 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+/* ------------------------------------------------------------
+   🎅 TEMA: CORAL VIVID
+   Coral + Dorado (sin morado)
+   ------------------------------------------------------------ */
+[data-theme="coral-vivid"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --bg-card: #1c2128;
+  --border-color: #3d4451;
+  --border-subtle: #2d333c;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Coral y Dorado */
+  --accent-primary: #ff7e67;
+  --accent-secondary: #ffc857;
+  --accent-tertiary: #ff9a8b;
+  
+  --accent-success: #22d97a;
+  --accent-warning: #ffc857;
+  --accent-error: #ff4d6d;
+  --accent-info: #ffb088;
+  --accent-highlight: #ffd166;
+  
+  /* Efectos */
+  --glow-primary: rgba(255, 126, 103, 0.15);
+  --glow-secondary: rgba(255, 200, 87, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  --gradient-primary: linear-gradient(135deg, #ff7e67 0%, #ffc857 100%);
+  --gradient-accent: linear-gradient(135deg, #ff9a8b 0%, #ff7e67 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+/* ------------------------------------------------------------
+   🔶 TEMA: CITRINE (Citrino)
+   Amarillo ámbar cálido
+   ------------------------------------------------------------ */
+[data-theme="gem-citrine"] {
+  --bg-primary: #191e24;
+  --bg-secondary: #1f242b;
+  --bg-tertiary: #262c34;
+  --bg-hover: #2d333c;
+  --bg-nav: #191e24;
+  --bg-card: #1c2128;
+  --border-color: #3d4451;
+  --border-subtle: #2d333c;
+  
+  --text-primary: #e5e9f0;
+  --text-secondary: #9fa6b2;
+  --text-muted: #6a7080;
+  
+  /* Citrino */
+  --accent-primary: #f39c12;
+  --accent-secondary: #f5b041;
+  --accent-tertiary: #d68910;
+  
+  --accent-success: #58d68d;
+  --accent-warning: #f39c12;
+  --accent-error: #e74c3c;
+  --accent-info: #f8c471;
+  --accent-highlight: #fad7a0;
+  
+  /* Efectos */
+  --glow-primary: rgba(243, 156, 18, 0.15);
+  --glow-secondary: rgba(245, 176, 65, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  --gradient-primary: linear-gradient(135deg, #f39c12 0%, #f5b041 100%);
+  --gradient-accent: linear-gradient(135deg, #d68910 0%, #f39c12 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+/* ============================================================
    📝 ESTILOS BASE
    ============================================================ */
 
